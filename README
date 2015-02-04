@@ -7,6 +7,13 @@ a) Group members:
 b) Files:
 
 c) How to run:
+    python main.py <bing account key> <precision> <query>
+
+    where:
+        * bing account key: optional Bint Account Key
+                            (can be omitted to use the default one)
+        * precision: a real number between 0 and 1
+        * query: a list of words in single quotes
 
 d) Internal design:
 
