@@ -1,0 +1,383 @@
+dr2763@paris:~$ /home/gravano/6111/Html/Proj1/run.sh 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk 0.9 'gates'Parameters:
+Client key  = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query       = gates
+Precision   = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%27&$top=10&$format=Atom
+Total no of results : 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://www.gates.com/
+ Title: Gates Corporation
+ Summary: Gates Corporation is Powering Progress™ in the Oil & Gas, Energy, Mining, Marine, Agriculture, Transportation and Automotive Industries.
+]
+
+Relevant (Y/N)?N
+Result 2
+[
+ URL: http://www.gatecrafters.com/design_your_gates.aspx
+ Title: Driveway Gates | Automatic Gates | Electric Gates
+ Summary: Driveway Gates - Automatic Gates The high-quality driveway gates from GateCrafters.com come in a wide variety of options to ...
+]
+
+Relevant (Y/N)?N
+Result 3
+[
+ URL: http://www.gates.com/industries/automotive
+ Title: Gates Automotive Aftermarket Solutions | Gates Corporation
+ Summary: Gates offers a complete line of original equipment (OE) automotive aftermarket products and solutions, including automotive hose, belts, & accessories.
+]
+
+Relevant (Y/N)?N
+Result 4
+[
+ URL: http://www.amazon.com/s?ie=UTF8&page=1&rh=i%3Aaps%2Ck%3Agates
+ Title: Amazon.com: gates
+ Summary: Product Description... Easy Open Extra Wide Safety Gate boasts 100 percent steel ...
+]
+
+Relevant (Y/N)?N
+Result 5
+[
+ URL: https://www.facebook.com/gatesnj
+ Title: gates | Facebook
+ Summary: the answer to "Gates" on "Is This Band Emo" is genius: "Gates is an... emo band. Let's just clarify that this band is EPIC. As in, think of your favorite movie, then ...
+]
+
+Relevant (Y/N)?N
+Result 6
+[
+ URL: http://www.gatesbbq.com/
+ Title: Gates Bar B.Q.
+ Summary: With the tantalizing hickory barbecue smell drawing the customer through the ranch-style doors, he is immediately greeted.
+]
+
+Relevant (Y/N)?N
+Result 7
+[
+ URL: http://castle.wikia.com/wiki/Victoria_Gates
+ Title: Victoria Gates - Castle Wiki
+ Summary: Character History Edit. She was formerly with the Department of Internal Affairs, earning the name "Iron Gates" for her uncompromising personality.
+]
+
+Relevant (Y/N)?N
+Result 8
+[
+ URL: http://en.wikipedia.org/wiki/Bill_Gates
+ Title: Bill Gates - Wikipedia, the free encyclopedia
+ Summary: William Henry Gates III, KBE (born October 28, 1955), popularly known as Bill Gates, is an American business magnate, philanthropist, investor, computer programmer ...
+]
+
+Relevant (Y/N)?Y
+Result 9
+[
+ URL: http://gateshousings.com/
+ Title: Gates Underwater Products | 'Bulletproof' Housings
+ Summary: Zsolt Sásdi demonstrates how to produce incredible underwater motion images with the Gates AX100 rig. His Demo Reel can be viewed in 4K. www.saser.hu...
+]
+
+Relevant (Y/N)?N
+Result 10
+[
+ URL: http://navigates.gates.com/
+ Title: NaviGates - Gates Corporation
+ Summary: Gates high quality belt & hose solutions support your energy, exploration, extraction, infrastructure, agriculture & transportation needs.
+]
+
+Relevant (Y/N)?N
+======================
+FEEDBACK SUMMARY
+Query gates
+Precision 0.1
+Still below the desired precision of 0.9
+Indexing results ....
+Indexing results ....
+Augmenting by  known programmer
+Parameters:
+Client key  = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query       = gates known programmer
+Precision   = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%20known%20programmer%27&$top=10&$format=Atom
+Total no of results : 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://www.britannica.com/EBchecked/topic/226865/Bill-Gates
+ Title: Bill Gates | biography - American computer programmer ...
+ Summary: American computer programmer and entrepreneur who cofounded Microsoft Corporation, the world’s largest personal-computer software company. Gates wrote his first ...
+]
+
+Relevant (Y/N)?Y
+Result 2
+[
+ URL: http://www.biography.com/people/groups/computer-programmers#!
+ Title: Famous Computer Programmers - Biography.com
+ Summary: Discover unexpected relationships between famous figures when you explore our famous computer programmers group.
+]
+
+Relevant (Y/N)?Y
+Result 3
+[
+ URL: http://en.wikipedia.org/wiki/Bill_Gates
+ Title: Bill Gates - Wikipedia, the free encyclopedia
+ Summary: William Henry "Bill" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor. Gates ...
+]
+
+Relevant (Y/N)?Y
+Result 4
+[
+ URL: http://www.zdnet.com/article/bill-gates-programmer/
+ Title: Bill Gates, programmer? | ZDNet - ZDNet | Technology News ...
+ Summary: Bill Gates, programmer? Summary: Clearly he did some programming in his teen years but we don't know what he worked on, and while Paul Allen went on to write advanced ...
+]
+
+Relevant (Y/N)?Y
+Result 5
+[
+ URL: http://www.arkhitech.com/12-greatest-programmers-of-all-time
+ Title: 12 Greatest Programmers of all Time | Arkhitech | More ...
+ Summary: 12 Greatest Programmers of all Time; Search form. Search . Our blog. 12 Greatest Programmers of all Time. Nov 28, 2013; Asim Mushtaq
+]
+
+Relevant (Y/N)?N
+Result 6
+[
+ URL: http://www.quotesandsayings.com/quotes/bill-gates/
+ Title: Bill Gates Quotes - Bill Gates Quotations - Famous Bill ...
+ Summary: A large collection of famous Bill Gates quotes and other quotations aimed at Bill Gates, Microsoft and Microsoft products from the 1970's to present time.
+]
+
+Relevant (Y/N)?Y
+Result 7
+[
+ URL: http://www.forbes.com/sites/tomiogeron/2013/02/26/bill-gates-celebrities-support-education-for-computer-programming/
+ Title: Bill Gates, Mark Zuckerberg, Chris Bosh Campaign For More ...
+ Summary: Bill Gates, Mark Zuckerberg and celebrities are joining a campaign to get more students into computer programming degrees.
+]
+
+Relevant (Y/N)?Y
+Result 8
+[
+ URL: http://k0i.cixopall.ga/
+ Title: Bill gates famous quotes
+ Summary: Bill gates famous quotes Below are some famous quotes, quoted by Bill Gates the founder of Microsoft corporation, ... computer programmer. Quotes about Gates.
+]
+
+Relevant (Y/N)?Y
+Result 9
+[
+ URL: http://www.ranker.com/list/notable-programmer_s)/reference
+ Title: Famous Programmers | List of the Top Well-Known Programmers
+ Summary: List of famous programmers, with photos, bios, and other information when available. Who are the top programmers in the world? This includes the most prominent ...
+]
+
+Relevant (Y/N)?N
+Result 10
+[
+ URL: http://www.biography.com/people/bill-gates-9307520
+ Title: Bill Gates - Biography - - Biography.com - Famous ...
+ Summary: Biography.com tracks the life and career of Bill Gates, from his early interest in computer programming to his place as founder of Microsoft, the world's largest ...
+]
+
+Relevant (Y/N)?Y
+======================
+FEEDBACK SUMMARY
+Query gates known programmer
+Precision 0.8
+Still below the desired precision of 0.9
+Indexing results ....
+Indexing results ....
+Augmenting by  bill computer
+Parameters:
+Client key  = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query       = gates known programmer bill computer
+Precision   = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%20known%20programmer%20bill%20computer%27&$top=10&$format=Atom
+Total no of results : 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://www.britannica.com/EBchecked/topic/226865/Bill-Gates
+ Title: Bill Gates | biography - American computer programmer ...
+ Summary: Bill GatesAmerican computer programmer, ... Gates was also known for his charitable work. ... (renamed the Bill & Melinda Gates Foundation in 1999) ...
+]
+
+Relevant (Y/N)?Y
+Result 2
+[
+ URL: http://en.wikipedia.org/wiki/Bill_Gates
+ Title: Bill Gates - Wikipedia, the free encyclopedia
+ Summary: William Henry "Bill" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor. Gates ...
+]
+
+Relevant (Y/N)?Y
+Result 3
+[
+ URL: http://www.biography.com/people/groups/computer-programmers#!
+ Title: Famous Computer Programmers - Biography.com
+ Summary: Browse notable computer programmers such as Steve Jobs, Bill Gates, and Stephen Wozniak.
+]
+
+Relevant (Y/N)?N
+Result 4
+[
+ URL: http://www.forbes.com/sites/tomiogeron/2013/02/26/bill-gates-celebrities-support-education-for-computer-programming/
+ Title: Bill Gates, Mark Zuckerberg, Chris Bosh Campaign For More ...
+ Summary: ... Mark Zuckerberg and celebrities are joining a campaign to get more students into computer programming ... Bill Gates, Mark Zuckerberg ... bringing ...
+]
+
+Relevant (Y/N)?Y
+Result 5
+[
+ URL: http://www.zdnet.com/article/bill-gates-programmer/
+ Title: Bill Gates, programmer? | ZDNet - ZDNet | Technology News ...
+ Summary: Here's the canonical "fanboy" picture of Bill Gates, Programmer ... Although Bill Gates is known mostly for his founding ... a traffic counting computer which would ...
+]
+
+Relevant (Y/N)?YY 
+Result 6
+[
+ URL: http://www.biography.com/people/bill-gates-9307520
+ Title: Bill Gates - Biography - - Biography.com - Famous ...
+ Summary: Biography.com tracks the life and career of Bill Gates, from his early interest in computer programming to his place as founder of Microsoft, the world's largest ...
+]
+
+Relevant (Y/N)?PP
+Result 7
+[
+ URL: http://www.dreamincode.net/forums/topic/346173-was-bill-gates-the-best-computer-programmer/
+ Title: Was Bill Gates The Best Computer Programmer? - Corner ...
+ Summary: Was Bill Gates the best computer programmer?: Search: Advanced Forum Search. Forums; ... Bill Gates is known for more of being a leader than a programmer, ...
+]
+
+Relevant (Y/N)?Y
+Result 8
+[
+ URL: http://zk.hiattalsius.ml/
+ Title: Bank bill gates
+ Summary: ... computer programmer. Bill and Melinda Gates’ to-do list will probably put ... (born October 28, 1955), popularly known as Bill Gates, is an American ...
+]
+
+Relevant (Y/N)?Y
+Result 9
+[
+ URL: http://homedesignwebsites.com/Bill-Gates---Biography-----Biographycom---Famous-
+ Title: Bill Gates Biography Biographycom Famous
+ Summary: Bill Gates Biography Biographycom Famous Biography.com tracks the life and career of Bill Gates, from his early interest in computer programming to his place as ...
+]
+
+Relevant (Y/N)?Y
+Result 10
+[
+ URL: http://k0i.cixopall.ga/
+ Title: Bill gates famous quotes
+ Summary: Bill gates famous quotes Below are some famous quotes, quoted by Bill Gates the founder of Microsoft corporation, ... computer programmer. Quotes about Gates.
+]
+
+Relevant (Y/N)?Y
+======================
+FEEDBACK SUMMARY
+Query gates known programmer bill computer
+Precision 0.8
+Still below the desired precision of 0.9
+Indexing results ....
+Indexing results ....
+Augmenting by  american october
+Parameters:
+Client key  = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query       = gates known programmer bill computer american october
+Precision   = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%20known%20programmer%20bill%20computer%20american%20october%27&$top=10&$format=Atom
+Total no of results : 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://www.britannica.com/EBchecked/topic/226865/Bill-Gates
+ Title: Bill Gates | biography - American computer programmer ...
+ Summary: American computer programmer and entrepreneur who cofounded ... Bill GatesAmerican computer programmer, ... Also known as. William Henry Gates III; born. October 28 ...
+]
+
+Relevant (Y/N)?Y
+Result 2
+[
+ URL: http://en.wikipedia.org/wiki/Bill_Gates
+ Title: Bill Gates - Wikipedia, the free encyclopedia
+ Summary: William Henry "Bill" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor. Gates ...
+]
+
+Relevant (Y/N)?Y
+Result 3
+[
+ URL: http://zk.hiattalsius.ml/
+ Title: Bank bill gates
+ Summary: ... popularly known as Bill Gates, is an American ... computer programmer. Bill and Melinda Gates’ to-do list ... William Henry Gates III, KBE (born October ...
+]
+
+Relevant (Y/N)?Y
+Result 4
+[
+ URL: http://homedesignwebsites.com/Bill-Gates---Biography-----Biographycom---Famous-
+ Title: Bill Gates Biography Biographycom Famous
+ Summary: William Henry Gates III, KBE (born October 28, 1955), popularly known as Bill Gates, is an American business magnate, ... computer programmer ... BILL GATES: ...
+]
+
+Relevant (Y/N)?Y
+Result 5
+[
+ URL: http://k0i.cixopall.ga/
+ Title: Bill gates famous quotes
+ Summary: ... computer programmer. Quotes about Gates. ... Quotations by Bill Gates, American Businessman, Born October ... 1955), popularly known as Bill Gates, is an American ...
+]
+
+Relevant (Y/N)?Y
+Result 6
+[
+ URL: http://63x.tijalike.ga/
+ Title: Bill gates list on education
+ Summary: William Henry Gates III, KBE (born October 28, 1955), popularly known as Bill Gates, is an American business magnate, philanthropist, investor, computer programmer.
+]
+
+Relevant (Y/N)?Y
+Result 7
+[
+ URL: http://www.windowsphone.com/en-us/store/app/bill-gates-fans/cee4ae20-3ed8-499f-9105-3d7c4ef235ba
+ Title: Bill Gates Fans | Windows Phone Apps+Games Store (United ...
+ Summary: Bill Gates Fans. Free. No reviews. By ... William Henry Gates III (born October 28, 1955), popularly known as Bill Gates, ... investor, computer programmer
+]
+
+Relevant (Y/N)?Y
+Result 8
+[
+ URL: http://fillable-formtax.rhcloud.com/read/bill-and-melinda-gates-found-abuja-offi-addressce/
+ Title: Bill And Melinda Gates Found Abuja Offi Addressce
+ Summary: ... 1955), popularly known as bill gates, is an american ... (born october 28, 1955), popularly known as bill ... computer programmer. Remarks by bill gates ...
+]
+
+Relevant (Y/N)?Y
+Result 9
+[
+ URL: http://an.gicefile.gq/
+ Title: Bill gates quotes on education
+ Summary: ... computer programmer. Quotes about Gates. ... by Bill Gates, American Businessman, Born October ... popularly known as Bill Gates, is an American business ...
+]
+
+Relevant (Y/N)?Y
+Result 10
+[
+ URL: http://est.duxamors.gq/
+ Title: Bill gates education
+ Summary: William Henry Gates III, KBE (born October 28, 1955), popularly known as Bill Gates, is an American business magnate, philanthropist, investor, computer programmer.
+]
+
+Relevant (Y/N)?Y
+======================
+FEEDBACK SUMMARY
+Query gates known programmer bill computer american october
+Precision 1.0
+Desired precision reached, done
+dr2763@paris:~$ 
+
