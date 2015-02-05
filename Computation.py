@@ -11,15 +11,41 @@ class Computation:
     # calculate the normalization of a vector
     @staticmethod
     def norm(vec):
-        sum = 0
+        summation = 0
         for i in vec:
-            sum += i*i
-        return math.sqrt(sum)
+            summation += i*i
+        return math.sqrt(summation)
 
     # calculate the inner product of two vectors
     @staticmethod
     def dot(vec1, vec2):
-        sum = 0
+        summation = 0
         for i in range(0, len(vec1)):
-            sum += vec1[i]*vec2[i]
-        return sum
+            summation += vec1[i]*vec2[i]
+        return summation
+
+    # calculate the summation of two vectors
+    @staticmethod
+    def sum(vec1, vec2):
+        if len(vec1) == 0 or len(vec2) == 0:
+            return vec1 if len(vec2) == 0 else vec2
+        vec = []
+        for i in range(0, len(vec1)):
+            vec.append(vec1[i]+vec2[i])
+        return vec
+
+    # calculate the diff of two vectors
+    @staticmethod
+    def dif(vec1, vec2):
+        if len(vec2) == 0:
+            return vec1
+        vec = []
+        for i in range(0, len(vec1)):
+            vec.append(vec1[i]-vec2[i])
+        return vec
+
+    # calculate the multiplication of a vector by a constant
+    @staticmethod
+    def multiply(vec, n):
+        for i in range(0, len(vec)):
+            vec[i] = vec[i]*n

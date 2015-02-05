@@ -2,6 +2,7 @@ import sys
 import search_engine
 import xml_parser
 import Document
+import QueryExpansion
 
 def save_xml(xml_obj, query=None):
     qfix = ''
@@ -41,7 +42,8 @@ def main(argv):
         print 'Query      = ' + search_engine.format_query(query)
         print 'Precision  = ' + str(target)
 
-        result = se.search(query, test='result.xml')
+        #result = se.search(query, test='result.xml')
+        result = se.search(query)
 
         if True:
             xml_file = save_xml(result, query)
@@ -89,9 +91,14 @@ def main(argv):
         if precision >= target:
             print 'Desired precision reached, done'
             break
+        if precision == 0.0:
+            print 'No relevant result'
+            break
 
         # Apply algo
         print 'Still below the desired precision of ' + str(target)
+        calculator = QueryExpansion.QueryExpansion(query)
+        query = calculator.get_new_query(docs)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

@@ -91,6 +91,7 @@ everywhere
 except
 few
 fifteen
+free
 fify
 fill
 find
@@ -325,3 +326,5 @@ com
 net
 wikipedia
 google
+encyclopedia
+wiki
