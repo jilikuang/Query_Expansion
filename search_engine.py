@@ -44,7 +44,7 @@ class SearchEngine:
         req = urllib2.Request(url, headers=headers)
         #response = urllib2.urlopen(req)
         # [Develop] Use saved result for test first
-        response = open('result', 'r')
+        response = open('result.xml', 'r')
         # If response is readable (read method is implemented),
         # it may be passed out directly to XML Element Tree parser
         #content = response.read()
