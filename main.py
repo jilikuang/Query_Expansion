@@ -1,5 +1,5 @@
 import sys
-import SearchEngine
+import search_engine
 import xml.dom.minidom
 
 def main(argv):
@@ -20,12 +20,11 @@ def main(argv):
     # Start of searching process (to loop)
     print 'Parameters:'
     print 'Client key = ' + bing_key
-    print 'Query      = ' + str(query)
+    print 'Query      = ' + search_engine.format_query(query)
     print 'Precision  = ' + str(precision)
 
-    #query = 'Query=%27gates%27&$top=10&$format=Atom'
-    #res = SearchEngine.SearchEngine.getResult(query)
-    #print res
+    se = search_engine.get_engine(bing_key)
+    result_xml = se.search(query)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
