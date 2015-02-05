@@ -43,6 +43,10 @@ class SearchEngine:
         print 'URL: ' + url
         req = urllib2.Request(url, headers=headers)
         #response = urllib2.urlopen(req)
+        # [Develop] Use saved result for test first
+        response = open('result', 'r')
+        # If response is readable (read method is implemented),
+        # it may be passed out directly to XML Element Tree parser
         #content = response.read()
         # content contains the xml/json response from Bing.
-        return None
+        return response
