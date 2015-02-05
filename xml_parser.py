@@ -1,8 +1,15 @@
 import re
 import xml.etree.ElementTree as etree
 
-def get_parser(xml_obj):
-    return XMLParser(xml_obj)
+def parse(xml_obj):
+    tree = etree.parse(xml_obj)
+    root = tree.getroot()
+    entries = []
+    for child in root:
+        match = re.search('.*entry$', child.tag)
+        if match != None:
+            entries.append(QueryEntry(child))
+    return entries
 
 class QueryEntry:
 
@@ -40,24 +47,3 @@ class QueryEntry:
 
     def get_url(self):
         return self.url
-
-class XMLParser:
-
-    def __init__(self, xml):
-        self.et = etree.parse(xml)
-        self.root = self.et.getroot()
-        self.entries = []
-        for child in self.root:
-            match = re.search('.*entry$', child.tag)
-            if match != None:
-                self.entries.append(child)
-
-    def get_entry_num(self):
-        return len(self.entries)
-
-    def parse_entry(self, index):
-        if index >= len(self.entries):
-            print 'Invalid entry index'
-            return None
-        entry = QueryEntry(self.entries[index])
-        return entry

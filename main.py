@@ -26,24 +26,21 @@ def main(argv):
     se = search_engine.get_engine(bing_key)
     result = se.search(query)
 
-    parser = xml_parser.get_parser(result)
+    entries = xml_parser.parse(result)
 
-    num_results = parser.get_entry_num()
-
-    print 'Total no of results: ' + str(num_results)
-    if num_results < 10:
+    print 'Total no of results: ' + str(len(entries))
+    if len(entries) < 10:
         print 'Abort due to fewer than 10 results'
         return
     print 'Bing search results:'
     print '======================'
 
-    for i in range(parser.get_entry_num()):
-        entry = parser.parse_entry(i)
+    for i in range(len(entries)):
         print 'Result ' + str(i+1)
         print '['
-        print ' URL: ' + entry.get_url()
-        print ' Title: ' + entry.get_title()
-        print ' Summary: ' + entry.get_description()
+        print ' URL: ' + entries[i].get_url()
+        print ' Title: ' + entries[i].get_title()
+        print ' Summary: ' + entries[i].get_description()
         print ']'
 
 if __name__ == "__main__":
