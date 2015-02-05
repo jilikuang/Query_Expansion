@@ -7,7 +7,7 @@ a) Group members:
 b) Files:
 
 c) How to run:
-    python main.py <bing account key> <precision> <query>
+    python main.py --key=<bing account key> <precision> <query>
 
     where:
         * bing account key: optional Bint Account Key
