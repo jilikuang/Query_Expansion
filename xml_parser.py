@@ -1,7 +1,7 @@
 import re
 import xml.etree.ElementTree as etree
 
-def parse(xml_obj):
+def parse_entries(xml_obj):
     tree = etree.parse(xml_obj)
     root = tree.getroot()
     entries = []

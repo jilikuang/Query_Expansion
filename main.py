@@ -26,7 +26,7 @@ def main(argv):
     se = search_engine.get_engine(bing_key)
     result = se.search(query)
 
-    entries = xml_parser.parse(result)
+    entries = xml_parser.parse_entries(result)
 
     print 'Total no of results: ' + str(len(entries))
     if len(entries) < 10:
