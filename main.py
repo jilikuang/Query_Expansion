@@ -1,6 +1,7 @@
 import sys
 import search_engine
 import xml_parser
+import Document
 
 def main(argv):
     #for arg in argv: print arg
@@ -32,16 +33,28 @@ def main(argv):
     if len(entries) < 10:
         print 'Abort due to fewer than 10 results'
         return
+
+    # User judgement and generate list for algo
+    docs = []
+
     print 'Bing search results:'
     print '======================'
 
     for i in range(len(entries)):
+        url = entries[i].get_url()
+        title = entries[i].get_title()
+        desc = entries[i].get_description()
         print 'Result ' + str(i+1)
         print '['
-        print ' URL: ' + entries[i].get_url()
-        print ' Title: ' + entries[i].get_title()
-        print ' Summary: ' + entries[i].get_description()
+        print ' URL: ' + url
+        print ' Title: ' + title
+        print ' Summary: ' + desc
         print ']'
+        relevance = True
+        judge = raw_input('Relevant (Y/N)? ')
+        if judge == 'N' or judge == 'n':
+            relevance = False
+        docs.append(Document.Document(title, url, desc, relevance))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
