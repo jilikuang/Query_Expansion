@@ -3,8 +3,11 @@ import search_engine
 import xml_parser
 import Document
 
-def save_xml(xml_obj, index):
-    output = 'result_' + str(index) + '.xml'
+def save_xml(xml_obj, query=None):
+    qfix = ''
+    if query != None:
+        qfix = '_' + search_engine.format_query(query, 'file')
+    output = 'result' + qfix + '.xml'
     f = open(output, 'w')
     f.write(xml_obj.read())
     f.close()
@@ -38,10 +41,10 @@ def main(argv):
         print 'Query      = ' + search_engine.format_query(query)
         print 'Precision  = ' + str(target)
 
-        result = se.search(query)
+        result = se.search(query, test='result.xml')
 
         if True:
-            xml_file = save_xml(result, routine_cnt)
+            xml_file = save_xml(result, query)
             print 'Resuls is saved as ' + xml_file
             result = open(xml_file, 'r')
 

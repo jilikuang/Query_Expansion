@@ -7,6 +7,8 @@ def get_engine(key):
 def format_query(query, option=''):
     if option == 'url':
         sep = '%20'
+    elif option == 'file':
+        sep = '_'
     else:
         sep = ' '
     q = sep.join(query)
@@ -25,7 +27,7 @@ class SearchEngine:
     def set_key(self, key):
         self.key = key
 
-    def search(self, query):
+    def search(self, query, test=None):
         if self.key == None:
             print 'Error: There is no key'
             return None
@@ -42,10 +44,13 @@ class SearchEngine:
         # Instantiate the request and issue it
         print 'URL: ' + url
         req = urllib2.Request(url, headers=headers)
-        #response = urllib2.urlopen(req)
-        # [Develop] Use saved result for test first
-        response = open('result.xml', 'r')
-        # If response is readable (read method is implemented),
+        if test != None:
+            # [Develop] Use saved result for test
+            print '[Test] Open XML file ' + test
+            response = open(test, 'r')
+        else:
+            response = urllib2.urlopen(req)
+        # response is readable (read method is implemented),
         # it may be passed out directly to XML Element Tree parser
         #content = response.read()
         # content contains the xml/json response from Bing.
