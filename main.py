@@ -3,6 +3,13 @@ import search_engine
 import xml_parser
 import Document
 
+def save_xml(xml_obj, index):
+    output = 'result_' + str(index) + '.xml'
+    f = open(output, 'w')
+    f.write(xml_obj.read())
+    f.close()
+    return output
+
 def main(argv):
     #for arg in argv: print arg
     if len(argv) < 2:
@@ -26,6 +33,11 @@ def main(argv):
 
     se = search_engine.get_engine(bing_key)
     result = se.search(query)
+
+    if True:
+        xml_file = save_xml(result, 0)
+        print 'Resuls is saved as ' + xml_file
+        result = open(xml_file, 'r')
 
     entries = xml_parser.parse_entries(result)
 
