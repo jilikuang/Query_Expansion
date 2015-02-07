@@ -122,8 +122,6 @@ class QueryExpansion:
                 elif count >= count2:
                     count2 = count
                     word2 = self.word_collection[i]
-        print word1
-        print word2
         return [word1, word2]
 
     def get_new_query(self, documents):
