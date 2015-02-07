@@ -7,15 +7,17 @@ a) Group members:
 b) Files:
 
 c) How to run:
-    python main.py --key=<bing account key> <precision> <query>
+    python main.py <bing account key> <precision> <query>
 
     where:
-        * bing account key: optional Bint Account Key
+        * bing account key: optional Bing Account Key
                             (can be omitted to use the default one)
         * precision: a real number between 0 and 1
         * query: a list of words in single quotes
 
 d) Internal design:
+    1. The program is composed of 2 parts
+    2. The query expansion algorithm is written in QueryExpansion.py
 
 e) Details of query modification:
 

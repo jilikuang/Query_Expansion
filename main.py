@@ -1,13 +1,13 @@
 import sys
-import search_engine
-import xml_parser
+import Search_engine
+import Xml_parser
 import Document
 import QueryExpansion
 
 def save_xml(xml_obj, query=None):
     qfix = ''
     if query != None:
-        qfix = '_' + search_engine.format_query(query, 'file')
+        qfix = '_' + Search_engine.format_query(query, 'file')
     output = 'result' + qfix + '.xml'
     f = open(output, 'w')
     f.write(xml_obj.read())
@@ -31,7 +31,7 @@ def main(argv):
         return
 
     # Initalization for routine
-    se = search_engine.get_engine(bing_key)
+    se = Search_engine.get_engine(bing_key)
     routine_cnt = 0
     precision = 0
 
@@ -40,7 +40,7 @@ def main(argv):
         routine_cnt += 1
         print 'Parameters:'
         print 'Client key = ' + bing_key
-        print 'Query      = ' + search_engine.format_query(query)
+        print 'Query      = ' + Search_engine.format_query(query)
         print 'Precision  = ' + str(target)
 
         #result = se.search(query, test='result.xml')
@@ -51,7 +51,7 @@ def main(argv):
             print 'Resuls is saved as ' + xml_file
             result = open(xml_file, 'r')
 
-        entries = xml_parser.parse_entries(result)
+        entries = Xml_parser.parse_entries(result)
 
         print 'Total no of results: ' + str(len(entries))
         if len(entries) < 10:
@@ -87,7 +87,7 @@ def main(argv):
         precision = accept_cnt / len(entries)
         print '======================'
         print 'Feedback Summary'
-        print 'Query ' + search_engine.format_query(query)
+        print 'Query ' + Search_engine.format_query(query)
         print 'Precision ' + str(precision)
         if precision >= target:
             print 'Desired precision reached, done'
