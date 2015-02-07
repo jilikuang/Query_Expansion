@@ -52,7 +52,7 @@ class QueryExpansion:
     def compute_vector(self, doc):
         words = {}
         doc_string = [doc.description, doc.url, doc.title]
-        factors = [1, 1.5, 2]
+        factors = [1, 2, 3]
         for i in range(0, 3):
             for word in self.get_split_words(doc_string[i]):
                 if not isinstance(word, str):
