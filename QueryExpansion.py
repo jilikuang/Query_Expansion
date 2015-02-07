@@ -32,17 +32,18 @@ class QueryExpansion:
         for doc in documents:
             for word in self.get_split_words(doc.title + ' ' + doc.url + ' ' + doc.description):
                 if not isinstance(word, str):
-                    continue
+                    word = word.encode('utf-8')
                 word = word.lower()
                 if (word == '') or (word in self.stop_words) or (word in self.word_collection):
                     continue
                 else:
-                    self.word_collection.append(str(word.lower()))
+                    self.word_collection.append(str(word))
 
     # split the words in the document
     @staticmethod
     def get_split_words(str):
-        symbol_to_replace = [",",".",":","-","?","!","'","/","&","|","_","=","+","\\","$","@","(",")","[","]","{","}"]
+        symbol_to_replace = [",",".",":","-","?","!","'","/","&","|","_","=","+","#","^",\
+                             "*","~","\\","\'","\"","\u","%","$","@","(",")","[","]","{","}"]
         temp = str
         for symbol in symbol_to_replace:
             temp = temp.replace(symbol, " ")
@@ -52,11 +53,11 @@ class QueryExpansion:
     def compute_vector(self, doc):
         words = {}
         doc_string = [doc.description, doc.url, doc.title]
-        factors = [1, 2, 3]
+        factors = [1, 1.2, 2]
         for i in range(0, 3):
             for word in self.get_split_words(doc_string[i]):
                 if not isinstance(word, str):
-                    continue
+                    word = word.encode('utf-8')
                 word = str(word.lower())
                 if word in self.word_collection:
                     if word in words:
@@ -99,17 +100,18 @@ class QueryExpansion:
                 vector_NR = Computation.Computation.sum(vector_NR, v)
         Computation.Computation.multiply(self.query_vector, self.a)
         Computation.Computation.multiply(vector_R, self.b/count_R)
-        Computation.Computation.multiply(vector_NR, self.c/count_R)
+        Computation.Computation.multiply(vector_NR, self.c/count_NR)
         self.query_vector = Computation.Computation.sum(self.query_vector, vector_R)
         self.query_vector = Computation.Computation.dif(self.query_vector, vector_NR)
 
     # compute new query terms
     def compute_new_term(self, documents):
         self.compute_query_vector(documents)
-        count1 = 0
+        count1 = -10000
         word1 = ''
-        count2 = 0
+        count2 = -10000
         word2 = ''
+        print self.word_collection
         for i in range(0, len(self.word_collection)):
             if self.word_collection[i] not in self.query:
                 count = self.query_vector[i]
