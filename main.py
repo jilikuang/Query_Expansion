@@ -16,18 +16,19 @@ def save_xml(xml_obj, query=None):
 
 def main(argv):
     #for arg in argv: print arg
-    if len(argv) < 2:
-        print 'Too few arguments'
-        return
-    if len(argv) > 2 and argv[0].startswith('--key='):
-        bing_key = argv[0][6:]
-        target = float(argv[1])
-        query = argv[2:]
+    if len(argv) == 3:
+        if argv[0] == 'test':
+            # Use the default Bing key
+            bing_key = '6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk'
+            target = float(argv[1])
+            query = argv[2:]
+        else:
+            bing_key = argv[0][6:]
+            target = float(argv[1])
+            query = argv[2:]
     else:
-        # Use the default Bing key
-        bing_key = '6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk'
-        target = float(argv[0])
-        query = argv[1:]
+        print 'Usage: <key> <target> <query>'
+        return
 
     # Initalization for routine
     se = search_engine.get_engine(bing_key)
@@ -97,6 +98,7 @@ def main(argv):
 
         # Apply algo
         print 'Still below the desired precision of ' + str(target)
+        print 'Indexing results ....'
         calculator = QueryExpansion.QueryExpansion(query)
         query = calculator.get_new_query(docs)
 
