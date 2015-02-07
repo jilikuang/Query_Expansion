@@ -110,7 +110,6 @@ class QueryExpansion:
         word1 = ''
         count2 = 0
         word2 = ''
-        print self.word_collection
         for i in range(0, len(self.word_collection)):
             if self.word_collection[i] not in self.query:
                 count = self.query_vector[i]
