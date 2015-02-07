@@ -124,6 +124,7 @@ class QueryExpansion:
         print 'Augmenting by ' + word1 + ' ' + word2
         return [word1, word2]
 
+    # call this function to start query expansion computation
     def get_new_query(self, documents):
         new_terms = self.compute_new_term(documents)
         return self.query + new_terms

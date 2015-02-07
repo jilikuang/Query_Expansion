@@ -27,6 +27,7 @@ class SearchEngine:
     def set_key(self, key):
         self.key = key
 
+    # pass query to Bing search API and return the results
     def search(self, query, test=None):
         if self.key == None:
             print 'Error: There is no key'

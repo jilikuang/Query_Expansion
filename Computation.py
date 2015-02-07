@@ -34,7 +34,7 @@ class Computation:
             vec.append(vec1[i]+vec2[i])
         return vec
 
-    # calculate the diff of two vectors
+    # calculate the difference of two vectors
     @staticmethod
     def dif(vec1, vec2):
         if len(vec2) == 0:
