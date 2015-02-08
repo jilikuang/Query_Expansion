@@ -43,7 +43,8 @@ class QueryExpansion:
     @staticmethod
     def get_split_words(str):
         symbol_to_replace = [",",".",":","-","?","!","'","/","&","|","_","=","+","#","^",\
-                             "*","~","\\","\'","\"","\u","%","$","@","(",")","[","]","{","}"]
+                             "*","~","\\","\'","\"","\u","%","$","@","(",")","[","]","{","}",\
+                             "0","1","2","3","4","5","6","7","8","9"]
         temp = str
         for symbol in symbol_to_replace:
             temp = temp.replace(symbol, " ")
@@ -53,7 +54,7 @@ class QueryExpansion:
     def compute_vector(self, doc):
         words = {}
         doc_string = [doc.description, doc.url, doc.title]
-        factors = [1, 1.2, 2]
+        factors = [1, 1.2, 1.5]
         for i in range(0, 3):
             for word in self.get_split_words(doc_string[i]):
                 if not isinstance(word, str):
@@ -107,24 +108,20 @@ class QueryExpansion:
     # compute new query terms
     def compute_new_term(self, documents):
         self.compute_query_vector(documents)
-        count1 = -10000
-        word1 = ''
-        count2 = -10000
-        word2 = ''
-        print self.word_collection
-        for i in range(0, len(self.word_collection)):
-            if self.word_collection[i] not in self.query:
-                count = self.query_vector[i]
-                if count >= count1:
-                    count2 = count1
-                    word2 = word1
-                    count1 = count
-                    word1 = self.word_collection[i]
-                elif count >= count2:
-                    count2 = count
-                    word2 = self.word_collection[i]
-        print 'Augmenting by ' + word1 + ' ' + word2
-        return [word1, word2]
+        word_set = {}
+        for i in range(0,len(self.word_collection)):
+            word_set[self.word_collection[i]] = self.query_vector[i]
+        sorted_set = sorted(word_set, key=word_set.get, reverse=True)
+        new_term = []
+        i = 0
+        while len(new_term) < 2 and i < len(sorted_set):
+            word = sorted_set[i]
+            i += 1
+            if word in self.query or not isinstance(word, str):
+                continue
+            new_term.append(word)
+        print 'Augmenting by ' + new_term[0] + ' ' + new_term[1]
+        return new_term
 
     # call this function to start query expansion computation
     def get_new_query(self, documents):
