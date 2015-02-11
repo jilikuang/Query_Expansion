@@ -5,6 +5,11 @@ import Document
 import QueryExpansion
 
 def save_xml(xml_obj, query=None):
+    """
+    save_xml(<XML object>[, query=<query list>])
+    Save the the XML object to a XML file and return the file name string
+    The query list can be optionally provided to form the postfix of the file
+    """
     qfix = ''
     if query != None:
         qfix = '_' + Search_engine.format_query(query, 'file')
@@ -15,7 +20,10 @@ def save_xml(xml_obj, query=None):
     return output
 
 def main(argv):
-    #for arg in argv: print arg
+    """
+    main(argv)
+    The entry point of the application
+    """
     if len(argv) == 3:
         if argv[0] == 'test':
             # Use the default Bing key
@@ -23,7 +31,7 @@ def main(argv):
             target = float(argv[1])
             query = argv[2:]
         else:
-            bing_key = argv[0][6:]
+            bing_key = argv[0]
             target = float(argv[1])
             query = argv[2:]
     else:
@@ -43,14 +51,15 @@ def main(argv):
         print 'Query      = ' + Search_engine.format_query(query)
         print 'Precision  = ' + str(target)
 
-        #result = se.search(query, test='result.xml')
         result = se.search(query)
 
-        if True:
+        # Save each result under testing
+        if argv[0] == 'test':
             xml_file = save_xml(result, query)
             print 'Resuls is saved as ' + xml_file
             result = open(xml_file, 'r')
 
+        # Retrieve the entry list from the result XML object
         entries = Xml_parser.parse_entries(result)
 
         print 'Total no of results: ' + str(len(entries))
