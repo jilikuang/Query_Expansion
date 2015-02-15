@@ -1,5 +1,6 @@
 import Computation
 import Document
+import math
 
 
 class QueryExpansion:
@@ -14,6 +15,7 @@ class QueryExpansion:
         for i in range(0,len(current_query)):
             self.query[i] = current_query[i].lower()
         self.word_collection = []
+        self.idf = {}
         self.query_vector = []
 
     # read the stop words from a file
@@ -29,15 +31,27 @@ class QueryExpansion:
     # construct words group
     def construct_words_vector(self, documents):
         self.word_collection = list(self.query)
+        for term in self.query:
+            self.idf[term] = 0
         for doc in documents:
+            current_doc = []
             for word in self.get_split_words(doc.title + ' ' + doc.url + ' ' + doc.description):
                 if not isinstance(word, str):
                     word = word.encode('utf-8')
                 word = word.lower()
-                if (word == '') or (word in self.stop_words) or (word in self.word_collection):
+                if (word == '') or (word in self.stop_words):
                     continue
                 else:
-                    self.word_collection.append(str(word))
+                    word = str(word)
+                    if word not in self.word_collection:
+                        self.word_collection.append(word)
+                        self.idf[word] = 0
+                    if word not in current_doc:
+                        self.idf[word] += 1
+                        current_doc.append(word)
+        num = len(documents)
+        for key in self.idf:
+            self.idf[key] = math.log(num/self.idf[key],2)
 
     # split the words in the document
     @staticmethod
@@ -62,9 +76,9 @@ class QueryExpansion:
                 word = str(word.lower())
                 if word in self.word_collection:
                     if word in words:
-                        words[word] += factors[i]
+                        words[word] += factors[i]*self.idf[word]
                     else:
-                        words[word] = factors[i]
+                        words[word] = factors[i]*self.idf[word]
         vector = []
         for word in self.word_collection:
             if word in words:
@@ -114,6 +128,8 @@ class QueryExpansion:
         sorted_set = sorted(word_set, key=word_set.get, reverse=True)
         new_term = []
         i = 0
+        print word_set
+        print sorted_set
         while len(new_term) < 2 and i < len(sorted_set):
             word = sorted_set[i]
             i += 1
