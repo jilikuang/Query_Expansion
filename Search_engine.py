@@ -12,18 +12,26 @@ def format_query(query, option=''):
     """
     format_query(<list of query>[, option={'url', 'file'}])
     Format a query string formed from the query list
-    Option 'url' will use '%20' for the space and enclose the string with '%27'
-    Option 'file' will use '_' to replace the space
+    Option 'url':
+        Add "" around composite words, surround the queries with '',
+        and format the queries with urllib2
+    Option 'file':
+        Use '_' to replace the space between queries
     """
-    if option == 'url':
-        sep = '%20'
-    elif option == 'file':
+    q_tmp = []
+    for s in query:
+        if option != 'url' or s.isalnum():
+            q_tmp.append(s)
+        else:
+            q_tmp.append('\"' + s + '\"')
+
+    if option == 'file':
         sep = '_'
     else:
         sep = ' '
-    q = sep.join(query)
+    q = sep.join(q_tmp)
     if option == 'url':
-        q = '%27' + q + '%27'
+        q = urllib2.quote('\'' + q + '\'')
     return q
 
 class SearchEngine:
