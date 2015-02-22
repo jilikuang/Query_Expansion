@@ -12,8 +12,10 @@ class QueryExpansion:
     def __init__(self, current_query):
         self.stop_words = self.read_stop_words('stopwords.txt')
         self.query = ['']*len(current_query)
-        for i in range(0,len(current_query)):
-            self.query[i] = current_query[i].lower()
+        self.query = []
+        for s in current_query:
+            for w in self.get_split_words(s):
+                self.query.append(w.lower())
         self.word_collection = []
         self.idf = {}
         self.query_vector = []
@@ -143,6 +145,6 @@ class QueryExpansion:
         return new_term
 
     # call this function to start query expansion computation
-    def get_new_query(self, documents):
+    def get_new_query(self, documents, old_query):
         new_terms = self.compute_new_term(documents)
-        return self.query + new_terms
+        return old_query + new_terms

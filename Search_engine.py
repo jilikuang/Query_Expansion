@@ -23,7 +23,7 @@ def format_query(query, option=''):
         if option != 'url' or s.isalnum():
             q_tmp.append(s)
         else:
-            q_tmp.append('\"' + s + '\"')
+            q_tmp.append('\"' + s.lower() + '\"')
 
     if option == 'file':
         sep = '_'

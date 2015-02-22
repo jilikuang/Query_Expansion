@@ -109,7 +109,7 @@ def main(argv):
         print 'Still below the desired precision of ' + str(target)
         print 'Indexing results ....'
         calculator = QueryExpansion.QueryExpansion(query)
-        query = calculator.get_new_query(docs)
+        query = calculator.get_new_query(docs, query)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
