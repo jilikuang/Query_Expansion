@@ -1,0 +1,201 @@
+jk3735@hanoi:~/ADB/project1$ python main.py test 0.9 'Big Apple'
+Parameters:
+Client key = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query      = Big Apple
+Precision  = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27%22big%20apple%22%27&$top=10&$format=Atom
+Resuls is saved as result_Big Apple.xml
+Total no of results: 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://www.bigapplepizza.com/
+ Title: Big Apple Pizza & Pasta - Big Apple Pizza
+ Summary: At Big Apple Pizza & Pasta Italian Restaurant ®, we are proud to serve freshly made dishes from Mama Lino´s authentic Italian recipes. We prepare our signature ...
+]
+Relevant (Y/N)? n
+Result 2
+[
+ URL: http://en.wikipedia.org/wiki/Big_Apple
+ Title: Big Apple - Wikipedia, the free encyclopedia
+ Summary: "Big Apple" is a nickname for New York City. It was first popularized in the 1920s by John J. Fitz Gerald, a sports writer for the New York Morning Telegraph.
+]
+Relevant (Y/N)? y
+Result 3
+[
+ URL: http://thebigapplefarm.com/
+ Title: The Big Apple Home Page
+ Summary: Big Apple Farm Store, pick your own apples, buy farm grown fruits and vegetables, fresh baked goods, pies, and ship apple gift boxes.
+]
+Relevant (Y/N)? n
+Result 4
+[
+ URL: http://salwen.com/apple.html
+ Title: Why Is New York City Called "The Big Apple"?
+ Summary: "When and how did New York City come to be called "The Big Apple'?" This is by far the most frequently asked question—and the most hotly debated—to reach our New ...
+]
+Relevant (Y/N)? y
+Result 5
+[
+ URL: http://bigapplefuncenter.com/
+ Title: Big Apple Fun Center
+ Summary: Welcome to the Big Apple the Nebraska Women's State Bowling Tournament
+]
+Relevant (Y/N)? n
+Result 6
+[
+ URL: http://www.bigapplefay.com/
+ Title: The Big Apple Restaurant & Sports Bar - North Carolina's ...
+ Summary: Fayetteville, North Carolina's premier nightlife hotspot, the Big Apple restaurant and pub. Visit the Big Apple tonight for nightly specials, great food, sports ...
+]
+Relevant (Y/N)? n
+Result 7
+[
+ URL: http://www.big-apple.dk/
+ Title: Big Apple
+ Summary: freshly squeezed juices, healthy wholegrain sandwiches and damn good coffee
+]
+Relevant (Y/N)? n
+Result 8
+[
+ URL: http://bigapplepancake.com/
+ Title: Big Apple Pancake House #1 - Home
+ Summary: Welcome to the big apple pancake house web page. Big apple is a family owned and operated business. We have been in business for 18 years, and have a combined ...
+]
+Relevant (Y/N)? n
+Result 9
+[
+ URL: http://www.bigappleherp.com/
+ Title: Big Apple Pet Supply - Reptile, Dog & Cat Supplies & Live ...
+ Summary: Huge Selection of Discount Pet Supplies - Dog, Cat & Reptile Products Plus Live Reptiles. Low Price Guarantee & Same Day Shipping.
+]
+Relevant (Y/N)? n
+Result 10
+[
+ URL: http://www.bigapplecircus.org/
+ Title: Big Apple Circus | Official Website | Homepage
+ Summary: Official site of the Big Apple Circus, now in its 35th Season! Buy tickets, watch videos, and learn more about the All-New Show under the Big Top.
+]
+Relevant (Y/N)? n
+2.0 10
+======================
+Feedback Summary
+Query Big Apple
+Precision 0.2
+Still below the desired precision of 0.9
+Indexing results ....
+big
+apple
+{'selection': -0.0007102272727272723, 'years': -0.0011991018045338809, 'web': -0.0011991018045338809, 'gerald': 0.031914560818001654, 'writer': 0.031914560818001654, 'day': -0.0007102272727272723, 'reptiles': -0.0007102272727272723, 'th': -0.0012519955758591099, 'homepage': -0.0015023946910309317, 'carolina': -0.0019951180772273774, 'coffee': -0.0019331949672612278, 'good': -0.0019331949672612278, 'dk': -0.0019331949672612278, 'food': -0.0009068718532851715, 'big': 1.0, 'popularized': 0.031914560818001654, 'watch': -0.0012519955758591099, 'boxes': -0.0010203249816672305, 'supplies': -0.001562499999999999, 'pies': -0.0010203249816672305, 'tickets': -0.0012519955758591099, 'bar': -0.0010882462239422057, 'gift': -0.0010203249816672305, 'did': 0.02231843147950637, 'morning': 0.031914560818001654, 'specials': -0.0009068718532851715, 'bowling': -0.0020606728004449832, 'page': -0.0016939480617464851, 'italian': -0.001875193144080753, 'house': -0.002638023969974538, 'circus': -0.0027543902668900415, 'debated\xe2\x80\x94to': 0.02231843147950637, 'operated': -0.0011991018045338809, 'home': -0.0018615753004493603, 'wholegrain': -0.0019331949672612278, 'pet': -0.001562499999999999, 'state': -0.0020606728004449832, 'question\xe2\x80\x94and': 0.02231843147950637, 'new': 0.06393239060137253, 'apples': -0.0010203249816672305, 'business': -0.0023982036090677617, 'learn': -0.0012519955758591099, 'pub': -0.0009068718532851715, 'fun': -0.00247280736053398, 'york': 0.07893445255228965, 'pancake': -0.002638023969974538, 'pasta': -0.0020627124584888285, 'bigapplecircus': -0.0012519955758591099, 'come': 0.02231843147950637, 'great': -0.0009068718532851715, 'goods': -0.0010203249816672305, 'restaurant': -0.0020498795711149874, 'healthy': -0.0019331949672612278, 'recipes': -0.0009375965720403765, 'shipping': -0.0007102272727272723, 'products': -0.0007102272727272723, 'pick': -0.0010203249816672305, 'asked': 0.02231843147950637, 'hotly': 0.02231843147950637, 'reptile': -0.001562499999999999, 'apple': 1.0, 'family': -0.0011991018045338809, 'supply': -0.0008522727272727268, 'owned': -0.0011991018045338809, 'signature': -0.0009375965720403765, 'salwen': 0.02231843147950637, 'city': 0.0566271318389489, 'prepare': -0.0009375965720403765, 'nickname': 0.031914560818001654, 'vegetables': -0.0010203249816672305, 'visit': -0.0009068718532851715, 'sports': 0.020912793022250256, 'live': -0.001562499999999999, 'damn': -0.0019331949672612278, 'telegraph': 0.031914560818001654, 'mama': -0.0009375965720403765, 'john': 0.031914560818001654, 'store': -0.0010203249816672305, 'combined': -0.0011991018045338809, 'website': -0.0015023946910309317, 'buy': -0.0015882839099470105, 'north': -0.0019951180772273774, 'season': -0.0012519955758591099, 'serve': -0.0009375965720403765, 'bigapplefay': -0.0009068718532851715, 'bigapplefuncenter': -0.0020606728004449832, 'low': -0.0007102272727272723, 'lino\xc2\xb4s': -0.0009375965720403765, 'women': -0.0020606728004449832, '\xc2\xae': -0.0009375965720403765, 'official': -0.0027543902668900415, 'cat': -0.001562499999999999, 'nebraska': -0.0020606728004449832, 'nightlife': -0.0009068718532851715, 'fruits': -0.0010203249816672305, 'squeezed': -0.0019331949672612278, 'called': 0.049100549254914014, 'videos': -0.0012519955758591099, 'tournament': -0.0020606728004449832, 'tonight': -0.0009068718532851715, 'ship': -0.0010203249816672305, 'guarantee': -0.0007102272727272723, 'grown': -0.0010203249816672305, 'huge': -0.0007102272727272723, 'dishes': -0.0009375965720403765, 'premier': -0.0009068718532851715, 'hotspot': -0.0009068718532851715, 'far': 0.02231843147950637, 'sandwiches': -0.0019331949672612278, 'freshly': -0.002006597174673448, 'plus': -0.0007102272727272723, 'discount': -0.0007102272727272723, 'pizza': -0.00318782834493728, 'farm': -0.002040649963334461, 'juices': -0.0019331949672612278, 'price': -0.0007102272727272723, 'welcome': -0.00227848466977652, 'reach': 0.02231843147950637, 'nightly': -0.0009068718532851715, 'fitz': 0.031914560818001654, 'bigapplepizza': -0.0009375965720403765, 'thebigapplefarm': -0.0010203249816672305, 'frequently': 0.02231843147950637, 'authentic': -0.0009375965720403765, 'center': -0.00247280736053398, 'proud': -0.0009375965720403765, 'dog': -0.001562499999999999, 'bigappleherp': -0.0007102272727272723, 'bigapplepancake': -0.0011991018045338809, 'fresh': -0.0010203249816672305, 'fayetteville': -0.0009068718532851715, 'baked': -0.0010203249816672305}
+['big', 'apple', 'york', 'new', 'city', 'called', 'gerald', 'writer', 'popularized', 'morning', 'nickname', 'telegraph', 'john', 'fitz', 'did', 'debated\xe2\x80\x94to', 'question\xe2\x80\x94and', 'come', 'asked', 'hotly', 'salwen', 'far', 'reach', 'frequently', 'sports', 'selection', 'day', 'reptiles', 'shipping', 'products', 'low', 'guarantee', 'huge', 'plus', 'discount', 'price', 'bigappleherp', 'supply', 'food', 'specials', 'pub', 'great', 'visit', 'bigapplefay', 'nightlife', 'tonight', 'premier', 'hotspot', 'nightly', 'fayetteville', 'recipes', 'signature', 'prepare', 'mama', 'serve', 'lino\xc2\xb4s', '\xc2\xae', 'dishes', 'bigapplepizza', 'authentic', 'proud', 'boxes', 'pies', 'gift', 'apples', 'goods', 'pick', 'vegetables', 'store', 'fruits', 'ship', 'grown', 'thebigapplefarm', 'fresh', 'baked', 'bar', 'years', 'web', 'operated', 'family', 'owned', 'combined', 'bigapplepancake', 'th', 'watch', 'tickets', 'learn', 'bigapplecircus', 'season', 'videos', 'homepage', 'website', 'supplies', 'pet', 'reptile', 'live', 'cat', 'dog', 'buy', 'page', 'home', 'italian', 'coffee', 'good', 'dk', 'wholegrain', 'healthy', 'damn', 'squeezed', 'sandwiches', 'juices', 'carolina', 'north', 'freshly', 'farm', 'restaurant', 'bowling', 'state', 'bigapplefuncenter', 'women', 'nebraska', 'tournament', 'pasta', 'welcome', 'business', 'fun', 'center', 'house', 'pancake', 'circus', 'official', 'pizza']
+Augmenting by york new
+Parameters:
+Client key = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query      = Big Apple york new
+Precision  = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27%22big%20apple%22%20york%20new%27&$top=10&$format=Atom
+Resuls is saved as result_Big Apple_york_new.xml
+Total no of results: 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://en.wikipedia.org/wiki/Big_Apple
+ Title: Big Apple - Wikipedia, the free encyclopedia
+ Summary: "Big Apple" is a nickname for New York City. It was first popularized in the 1920s by John J. Fitz Gerald, a sports writer for the New York Morning Telegraph.
+]
+Relevant (Y/N)? y
+Result 2
+[
+ URL: http://salwen.com/apple.html
+ Title: Why Is New York City Called "The Big Apple"?
+ Summary: "When and how did New York City come to be called "The Big Apple'?" This is by far the most frequently asked question—and the most hotly debated—to reach our New ...
+]
+Relevant (Y/N)? y
+Result 3
+[
+ URL: http://gonyc.about.com/cs/atozinde1/a/bigapple.htm
+ Title: Why is New York City called The Big Apple?
+ Summary: Curious about why New York City is called the Big Apple? A common question about New York City, we explore the origin of New York City's nickname in this article.
+]
+Relevant (Y/N)? y
+Result 4
+[
+ URL: http://en.wikipedia.org/wiki/New_York_City
+ Title: New York City - Wikipedia, the free encyclopedia
+ Summary: New York – often called New York City or the City of New York to distinguish it from the State of New York, of which it is a part – is the most populous city in ...
+]
+Relevant (Y/N)? y
+Result 5
+[
+ URL: http://big-apple.tv/
+ Title: BIG-APPLE.TV | Videos, Photos and Infos from New York City!
+ Summary: This is the home of BIG-Apple.TV! We show only really great videos and photos from the beautiful City of NEW YORK - the place to be.
+]
+Relevant (Y/N)? n
+Result 6
+[
+ URL: http://prosoccertalk.nbcsports.com/2015/02/19/new-york-city-fc-an-inside-look-at-the-beginning-of-the-big-apples-mls-team/
+ Title: New York City FC: Inside look at the beginning of ...
+ Summary: PST goes behind-the-scenes on New York City FC's preseason trip to Manchester ahead of their inaugural MLS season.
+]
+Relevant (Y/N)? n
+Result 7
+[
+ URL: http://www.bigapplecircus.org/
+ Title: Big Apple Circus | Official Website | Homepage
+ Summary: Official site of the Big Apple Circus, now in its 35th Season! Buy tickets, watch videos, and learn more about the All-New Show under the Big Top.
+]
+Relevant (Y/N)? n
+Result 8
+[
+ URL: http://www.newyorknewyork.com/
+ Title: Las Vegas Hotel - New York-New York Hotel & Casino
+ Summary: Make reservations at New York - New York Hotel & Casino in Las Vegas. Come enjoy the restaurants, spa, gaming, and more in the center of the Las Vegas strip.
+]
+Relevant (Y/N)? n
+Result 9
+[
+ URL: http://www.nycgo.com/
+ Title: The Official New York City Guide to NYC Attractions ...
+ Summary: The Five Boroughs. New York City is made up of five boroughs: the Bronx, Brooklyn, Manhattan, Queens and Staten Island. Each one has enough attractions—and enough ...
+]
+Relevant (Y/N)? y
+Result 10
+[
+ URL: http://www.newyorknewyork.com/attractions/the-roller-coaster.aspx
+ Title: New York New York roller coaster
+ Summary: Feel the rush on the Roller Coaster at New York - New York Hotel & Casino, Las Vegas.
+]
+Relevant (Y/N)? n
+5.0 10
+======================
+Feedback Summary
+Query Big Apple york new
+Precision 0.5
+Still below the desired precision of 0.9
+Indexing results ....
+big
+apple
+york
+new
+{'coaster': -0.007622786398541882, 'manchester': -0.0012245412764165333, 'tv': -0.006808013317432818, 'gerald': 0.015524308702336505, 'writer': 0.015524308702336505, 'th': -0.002112982586324223, 'homepage': -0.0025355791035890675, 'preseason': -0.0012245412764165333, 'far': 0.012807450588306214, 'big': 1.0, 'popularized': 0.015524308702336505, 'watch': -0.002112982586324223, 'vegas': -0.0054378131813683185, 'nyc': 0.012786335773364452, 'pst': -0.0012245412764165333, 'tickets': -0.002112982586324223, 'did': 0.012807450588306214, 'morning': 0.015524308702336505, 'common': 0.012086147394668236, 'team': -0.0012245412764165333, 'newyorknewyork': -0.002844025397741174, 'restaurants': -0.0016867597175693175, 'enjoy': -0.0016867597175693175, 'queens': 0.010655279811137041, 'gonyc': 0.012086147394668236, 'debated\xe2\x80\x94to': 0.012807450588306214, 'atozinde': 0.012086147394668236, 'curious': 0.012086147394668236, 'really': -0.0021275041616977556, 'attractions\xe2\x80\x94and': 0.010655279811137041, 'state': 0.02738664948685302, 'question\xe2\x80\x94and': 0.012807450588306214, 'goes': -0.0012245412764165333, 'new': 1.0, 'explore': 0.012086147394668236, 'york': 1.0, 'distinguish': 0.02738664948685302, 'article': 0.012086147394668236, 'come': 0.007773029346138492, 'roller': -0.007622786398541882, 'great': -0.0021275041616977556, 'ahead': -0.0012245412764165333, 'island': 0.010655279811137041, 'casino': -0.004258818734265071, 'guide': 0.012786335773364452, 'place': -0.0021275041616977556, 'bronx': 0.010655279811137041, 'nbcsports': -0.0012245412764165333, 'asked': 0.012807450588306214, 'origin': 0.012086147394668236, 'hotly': 0.012807450588306214, 'apple': 1.0318473416549276, 'prosoccertalk': -0.0012245412764165333, 'feel': -0.002382120749544338, 'attractions': 0.007272234220312414, 'salwen': 0.012807450588306214, 'bigapple': 0.012086147394668236, 'strip': -0.0016867597175693175, 'cs': 0.012086147394668236, 'city': 0.0, 'beginning': -0.0026939908081163727, 'question': 0.012086147394668236, 'sports': 0.015524308702336505, 'telegraph': 0.015524308702336505, 'john': 0.015524308702336505, 'website': -0.0025355791035890675, 'buy': -0.002112982586324223, 'season': -0.002332829068811472, 'hotel': -0.005673612070788967, 'photos': -0.004680509155735061, 'infos': -0.0025530049940373062, 'center': -0.0016867597175693175, 'rush': -0.002382120749544338, 'look': -0.0026939908081163727, 'inside': -0.0026939908081163727, 'official': 0.005688059986395397, 'scenes': -0.0012245412764165333, 'mls': -0.0024490825528330666, 'apples': -0.0012245412764165333, 'learn': -0.002112982586324223, 'called': 0.039196734914806894, 'beautiful': -0.0021275041616977556, 'videos': -0.004748446952403886, 'reservations': -0.0016867597175693175, 'circus': -0.00464856168991329, 'staten': 0.010655279811137041, 'home': -0.0021275041616977556, 'spa': -0.0016867597175693175, 'trip': -0.0012245412764165333, 'make': -0.0016867597175693175, 'inaugural': -0.0012245412764165333, 'boroughs': 0.021310559622274083, 'populous': 0.02738664948685302, 'manhattan': 0.010655279811137041, 'gaming': -0.0016867597175693175, 'reach': 0.012807450588306214, 'fitz': 0.015524308702336505, 'brooklyn': 0.010655279811137041, 'fc': -0.003918532084532906, 'frequently': 0.012807450588306214, 'nickname': 0.01929888061784286, 'las': -0.0054378131813683185, '\xe2\x80\x93': 0.05477329897370604, 'bigapplecircus': -0.002112982586324223, 'nycgo': 0.010655279811137041}
+['apple', 'big', 'new', 'york', '\xe2\x80\x93', 'called', 'state', 'distinguish', 'populous', 'boroughs', 'nickname', 'gerald', 'writer', 'popularized', 'morning', 'sports', 'telegraph', 'john', 'fitz', 'far', 'did', 'debated\xe2\x80\x94to', 'question\xe2\x80\x94and', 'asked', 'hotly', 'salwen', 'reach', 'frequently', 'nyc', 'guide', 'common', 'gonyc', 'atozinde', 'curious', 'explore', 'article', 'origin', 'bigapple', 'cs', 'question', 'queens', 'attractions\xe2\x80\x94and', 'island', 'bronx', 'staten', 'manhattan', 'brooklyn', 'nycgo', 'come', 'attractions', 'official', 'city', 'manchester', 'preseason', 'pst', 'team', 'goes', 'ahead', 'nbcsports', 'prosoccertalk', 'scenes', 'apples', 'trip', 'inaugural', 'restaurants', 'enjoy', 'strip', 'center', 'reservations', 'spa', 'make', 'gaming', 'th', 'watch', 'tickets', 'buy', 'learn', 'bigapplecircus', 'really', 'great', 'place', 'beautiful', 'home', 'season', 'feel', 'rush', 'mls', 'homepage', 'website', 'infos', 'beginning', 'look', 'inside', 'newyorknewyork', 'fc', 'casino', 'circus', 'photos', 'videos', 'vegas', 'las', 'hotel', 'tv', 'coaster', 'roller']
+Augmenting by – called
+Parameters:
+Client key = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query      = Big Apple york new – called
+Precision  = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27%22big%20apple%22%20york%20new%20%22%E2%80%93%22%20called%27&$top=10&$format=Atom
+Resuls is saved as result_Big Apple_york_new_–_called.xml
+Total no of results: 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://en.wikipedia.org/wiki/Big_Apple
+ Title: Big Apple - Wikipedia, the free encyclopedia
+ Summary: I trust your trip to 'the big apple' (New York) was a huge success and only wish that I had been able to make it with you.
+]
+Relevant (Y/N)? ^CTraceback (most recent call last):
