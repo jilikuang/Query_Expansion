@@ -20,7 +20,13 @@ d) Internal design:
     2. The query expansion algorithm is written in QueryExpansion.py
 
 e) Details of query modification:
+1. We use Roccio algorithm
+2. calculate the term frequency for each document
+3. Divided by the length of the document
+4. tf-idf
+
 
 f) Bing Search Account Key:
+6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
 
 g) Additional information:
