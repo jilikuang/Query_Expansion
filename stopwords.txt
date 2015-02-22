@@ -365,3 +365,6 @@ id
 aspx
 el
 including
+cnbc
+espn
+cnn

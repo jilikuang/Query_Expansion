@@ -80,11 +80,14 @@ class QueryExpansion:
                     else:
                         words[word] = factors[i]*self.idf[word]
         vector = []
+        sum = 0
         for word in self.word_collection:
             if word in words:
                 vector.append(words[word])
+                sum += words[word]
             else:
                 vector.append(0)
+        Computation.Computation.multiply(vector, 1/sum)
         return vector
 
     # initialize query vector
