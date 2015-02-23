@@ -5,26 +5,39 @@ a) Group members:
     Jie-Gang Kuang (jk3735)
 
 b) Files:
+    /--+--Computation.py
+       +--Document.py
+       +--main.py
+       +--QueryExpansion.py
+       +--README
+       +--Search_engine.py
+       +--stopwords.txt
+       +--Xml_parser.py
 
 c) How to run:
     python main.py <bing account key> <precision> <query>
 
     where:
-        * bing account key: optional Bing Account Key
-                            (can be omitted to use the default one)
+        * bing account key: the Bing Account Key used for searching
         * precision: a real number between 0 and 1
         * query: a list of words in single quotes
 
 d) Internal design:
+    1. Overview of program structure
+        The entry point of this program is main.py. After the search engine is setup with the Bing account key, the routine to retrieve the relative results will start. There are mainly four stages in the routine: search, parsing, judgement, and query expansion.
+
+        At the begining of the routine, the query term list is processed by the search engine to form the request to the Bing server. In our setting, the result of the search from the Bing server will contain top-10 relevant web sites and be of XML format. The XML object is then parsed to get the information for users to decide whether each result is indeed relevant or not.
+
+        After the judgement process is done, the program terminates if the desired relevance of the result is met or there is totally no relevant result. However, when there are relevant results but the relevance requirement is not met, the routine must be redone to get more relevant results. For the next routine, we pass the entire judgement result including the content of search results to the query expansion module which can compute the best fit words for the next round. The routine is then repeated until the relevance requirement is met.
+
     1. The program is composed of 2 parts
     2. The query expansion algorithm is written in QueryExpansion.py
 
 e) Details of query modification:
-1. We use Roccio algorithm
+1. We use Rocchio algorithm
 2. calculate the term frequency for each document
 3. Divided by the length of the document
 4. tf-idf
-
 
 f) Bing Search Account Key:
 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
