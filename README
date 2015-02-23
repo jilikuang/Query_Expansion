@@ -49,15 +49,25 @@ d) Internal design:
 
 
 e) Details of query modification:
-1. We use Rocchio algorithm
-2. calculate the term frequency for each document
-3. Divided by the length of the document
-4. Give different weights to title and description
+1. remove the symbols and stop-words
+        As a part of the
+
+2. Give different weights to title and description
         Based on our survey of the research papers, we find that we need to assign different weights to the terms in
-        different part. For example, if a term is in the title, we should assign more weight to it. Therefore, after
-        numbers of experiments, we have chosen to assign 1.2 to the terms in the title while 1 to the others.
-5. remove the symbols and stop-words
+    different part. For example, if a term is in the title, we should assign more weight to it. Therefore, after numbers
+    of experiments, we have chosen to assign 1.2 to the terms in the title while 1 to the others.
+
+3. calculate the normalized term frequency for each document
+        We take the normalized term frequency instead of the original term frequency. This is calculated by dividing
+    the length of the document.
+
 4. tf-idf
+        In order to
+
+5. Rocchio algorithm
+        The key part of our query modification algorithm is Rocchio algorithm, which is also the most popular algorithm
+    in query expansion.
+
 
 
 f) Bing Search Account Key: 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
@@ -66,11 +76,19 @@ f) Bing Search Account Key: 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
 g) Additional information:
 1. Character encoding:
         When we construct the inverted files, one of the nasty problems we encounter is character encoding. Some results
-        in XML are returned containing unicode encoding characters and they induce some unexpected results. Since the
-        unicode characters are generally special symbols, our approach is simply replacing each of them with a whitespace.
+    in XML are returned containing unicode encoding characters and they induce some unexpected results. Since the
+    unicode characters are generally special symbols, our approach is simply replacing each of them with a whitespace.
 
-        Compared to using <string>.encode('ascii', 'ignore), this approach can help us get words correctly.
-        In encode('ascii', 'ignore'), the non-ascii characters are simple skipped, which results in that some words
-        seperated with these non-ascii symbols will become one word and this result is not we expect. In our observation,
-        because the most information lies in alphanumeric characters which are most of the time ascii-encoded, even if
-        we replace the non-ascii characters with whitespaces, the important information is still preserved.
+        Compared to using <string>.encode('ascii', 'ignore), this approach can help us get words correctly. In
+    encode('ascii', 'ignore'), the non-ascii characters are simple skipped, which results in that some words seperated
+    with these non-ascii symbols will become one word and this result is not we expect. In our observation, because the
+    most information lies in alphanumeric characters which are most of the time ascii-encoded, even if we replace the
+    non-ascii characters with whitespaces, the important information is still preserved.
+
+
+h) Reference
+[1] A Survey of Automatic Query Expansion in Information Retrieval, CLAUDIO CARPINETO and GIOVANNI ROMANO,
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.307.8469&rep=rep1&type=pdf
+[2] RELEVANCE FEEDBACK AND OTHER QUERY MODIFICATION TECHNIQUES, Donna Harman,
+http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap11.htm
+
