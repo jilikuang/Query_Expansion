@@ -28,7 +28,7 @@ d) Internal design:
 
         At the begining of the routine, the query term list is processed by the search engine to form the request to the Bing server. In our setting, the result of the search from the Bing server will contain top-10 relevant web sites and be of XML format. The XML object is then parsed to get the information for users to decide whether each result is indeed relevant or not.
 
-        After the judgement process is done, the program terminates if the desired relevance of the result is met or there is totally no relevant result.
+        After the judgement process is done, the program terminates if the desired relevance of the result is met or there is totally no relevant result. However, when there are relevant results but the relevance requirement is not met, the routine must be redone to get more relevant results. For the next routine, we pass the entire judgement result including the content of search results to the query expansion module which can compute the best fit words for the next round. The routine is then repeated until the relevance requirement is met.
 
     1. The program is composed of 2 parts
     2. The query expansion algorithm is written in QueryExpansion.py
