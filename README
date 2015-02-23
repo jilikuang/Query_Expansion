@@ -34,8 +34,7 @@ c) How to run:
 
 d) Internal design:
 
-    Overall structure:
-    Our program is mainly composed of four parts: search, parsing, judgement, and query expansion.
+    Overall structure: Our program is mainly composed of four parts: search, parsing, judgement, and query expansion.
 
     main.py: The entry point of the program. At the beginning of the routine, the query term list is processed by the
     search engine to form the request to the Bing server. In our setting, the result of the search from the Bing server
@@ -65,7 +64,9 @@ e) Details of query modification:
 
 The query modification algorithm is composed of the following parts:
 1. remove the symbols and stop-words
-        As a part of the
+         In most cases, stop words add little semantic value to a sentence. They are filler words that help sentences
+    flow better, but provide very little context on their own. And we have found a list of common English stop words
+    from Wikipedia.
 
 2. Give different weights to title and description
         Based on our survey of the research papers, we find that we need to assign different weights to the terms in
@@ -73,15 +74,18 @@ The query modification algorithm is composed of the following parts:
     of experiments, we have chosen to assign 1.2 to the terms in the title while 1 to the others.
 
 3. calculate the normalized term frequency for each document
-        We take the normalized term frequency instead of the original term frequency. This is calculated by dividing
-    the length of the document.
+        We take the normalized term frequency instead of the original term frequency. This is calculated by dividing the
+    original term frequency by the length of the document.
 
-4. tf-idf
-        In order to
+4. Compute tf-idf
+        In our algorithm, tf is the normalized term frequency in the document and idf(t) = log N/M(t), where M is the
+    number of documents that contain term t. And then we compute tfidf = tf * idf.
 
 5. Rocchio algorithm
         The key part of our query modification algorithm is Rocchio algorithm, which is also the most popular algorithm
-    in query expansion.
+    in query expansion. The new vector is calculated by:
+                        Q1 = a*Q0 + b*sum(R/n1) - c*sum(NR/n2)
+    We have chosen a=1, b=0.75, c=0.15 based on the survey.
 
 
 
