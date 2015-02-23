@@ -1,6 +1,7 @@
 import Computation
 import Document
 import math
+import re
 
 
 class QueryExpansion:
@@ -57,11 +58,18 @@ class QueryExpansion:
 
     # split the words in the document
     @staticmethod
-    def get_split_words(str):
+    def get_split_words(string):
+        stripped = ""
+        for c in string:
+            if 0 < ord(c) < 127:
+                stripped += c
+            else:
+                stripped += ' '
+        string = stripped
         symbol_to_replace = [",",".",":","-","?","!","'","/","&","|","_","=","+","#","^",\
                              "*","~","\\","\'","\"","\u","%","$","@","(",")","[","]","{","}",\
                              "0","1","2","3","4","5","6","7","8","9"]
-        temp = str
+        temp = string
         for symbol in symbol_to_replace:
             temp = temp.replace(symbol, " ")
         return temp.split(" ")
@@ -133,8 +141,8 @@ class QueryExpansion:
         sorted_set = sorted(word_set, key=word_set.get, reverse=True)
         new_term = []
         i = 0
-        print word_set
-        print sorted_set
+        # print word_set
+        # print sorted_set
         while len(new_term) < 2 and i < len(sorted_set):
             word = sorted_set[i]
             i += 1

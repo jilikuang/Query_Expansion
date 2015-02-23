@@ -56,7 +56,6 @@ def main(argv):
         # Save each result under testing
         if argv[0] == 'test':
             xml_file = save_xml(result, query)
-            print 'Resuls is saved as ' + xml_file
             result = open(xml_file, 'r')
 
         # Retrieve the entry list from the result XML object
