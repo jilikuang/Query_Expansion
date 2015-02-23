@@ -4,42 +4,73 @@ a) Group members:
     Di Ruan (dr2763)
     Jie-Gang Kuang (jk3735)
 
+
 b) Files:
-    /--+--Computation.py
-       +--Document.py
+    /--+--README
        +--main.py
+       +--Computation.py
+       +--Document.py
        +--QueryExpansion.py
-       +--README
        +--Search_engine.py
-       +--stopwords.txt
        +--Xml_parser.py
+       +--stopwords.txt
+       +--transcript_musk.txt
+       +--transcript_gates.txt
+       +--transcript_columbia.txt
+
 
 c) How to run:
     python main.py <bing account key> <precision> <query>
-
     where:
         * bing account key: the Bing Account Key used for searching
         * precision: a real number between 0 and 1
         * query: a list of words in single quotes
 
+
 d) Internal design:
-    The entry point of this program is main.py. After the search engine is setup with the Bing account key, the routine to retrieve the relative results will start. There are mainly four stages in the routine: search, parsing, judgement, and query expansion.
+    1. Overview of program structure
+        The entry point of this program is main.py. After the search engine is setup with the Bing account key, the
+        routine to retrieve the relative results will start. There are mainly four stages in the routine: search,
+        parsing, judgement, and query expansion.
 
-    At the begining of the routine, the query term list is processed by the search engine to form the request to the Bing server. In our setting, the result of the search from the Bing server will contain top-10 relevant web sites and be of XML format. The XML object is then parsed to get the information for users to decide whether each result is indeed relevant or not.
+        At the beginning of the routine, the query term list is processed by the search engine to form the request to
+        the Bing server. In our setting, the result of the search from the Bing server will contain top-10 relevant
+        web sites and be of XML format. The XML object is then parsed to get the information for users to decide
+        whether each result is indeed relevant or not.
 
-    After the judgement process is done, the program terminates if the desired relevance of the result is met or there is totally no relevant result. However, when there are relevant results but the relevance requirement is not met, the routine must be redone to get more relevant results. For the next routine, we pass the entire judgement result including the content of search results to the query expansion module which can compute the best fit words for the next round. The routine is then repeated until the relevance requirement is met.
+        After the judgement process is done, the program terminates if the desired relevance of the result is met or
+        there is totally no relevant result. However, when there are relevant results but the relevance requirement
+        is not met, the routine must be redone to get more relevant results. For the next routine, we pass the entire
+        judgement result including the content of search results to the query expansion module which can compute the
+        best fit words for the next round. The routine is then repeated until the relevance requirement is met.
+
+    1. The program is composed of 2 parts
+    2. The query expansion algorithm is written in QueryExpansion.py
+
 
 e) Details of query modification:
 1. We use Rocchio algorithm
 2. calculate the term frequency for each document
 3. Divided by the length of the document
+4. Give different weights to title and description
+        Based on our survey of the research papers, we find that we need to assign different weights to the terms in
+        different part. For example, if a term is in the title, we should assign more weight to it. Therefore, after
+        numbers of experiments, we have chosen to assign 1.2 to the terms in the title while 1 to the others.
+5. remove the symbols and stop-words
 4. tf-idf
 
-f) Bing Search Account Key:
-6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+
+f) Bing Search Account Key: 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+
 
 g) Additional information:
-    1. Character encoding:
-        When we construct the inverted files, one of the nasty problems we encounter is character encoding. Some results in XML are returned containing unicode encoding characters and they induce some unexpected results. Since the unicode characters are generally special symbols, our approach is simply replacing each of them with a whitespace.
+1. Character encoding:
+        When we construct the inverted files, one of the nasty problems we encounter is character encoding. Some results
+        in XML are returned containing unicode encoding characters and they induce some unexpected results. Since the
+        unicode characters are generally special symbols, our approach is simply replacing each of them with a whitespace.
 
-        Compared to using <string>.encode('ascii', 'ignore), this approach can help us get words correctly. In encode('ascii', 'ignore'), the non-ascii characters are simple skipped, which results in that some words seperated with these non-ascii symbols will become one word and this result is not we expect. In our observation, because the most information lies in alphanumeric characters which are most of the time ascii-encoded, even if we replace the non-ascii characters with whitespaces, the important information is still preserved.
+        Compared to using <string>.encode('ascii', 'ignore), this approach can help us get words correctly.
+        In encode('ascii', 'ignore'), the non-ascii characters are simple skipped, which results in that some words
+        seperated with these non-ascii symbols will become one word and this result is not we expect. In our observation,
+        because the most information lies in alphanumeric characters which are most of the time ascii-encoded, even if
+        we replace the non-ascii characters with whitespaces, the important information is still preserved.
