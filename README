@@ -1,11 +1,14 @@
 COMS E6111 Advanced Database Systems - Project 1
 
 a) Group members:
+
     Di Ruan (dr2763)
     Jie-Gang Kuang (jk3735)
 
 
+
 b) Files:
+
     /--+--README
        +--main.py
        +--Computation.py
@@ -19,7 +22,9 @@ b) Files:
        +--transcript_columbia.txt
 
 
+
 c) How to run:
+
     python main.py <bing account key> <precision> <query>
     where:
         * bing account key: the Bing Account Key used for searching
@@ -28,27 +33,37 @@ c) How to run:
 
 
 d) Internal design:
-    1. Overview of program structure
-        The entry point of this program is main.py. After the search engine is setup with the Bing account key, the
-        routine to retrieve the relative results will start. There are mainly four stages in the routine: search,
-        parsing, judgement, and query expansion.
 
-        At the beginning of the routine, the query term list is processed by the search engine to form the request to
-        the Bing server. In our setting, the result of the search from the Bing server will contain top-10 relevant
-        web sites and be of XML format. The XML object is then parsed to get the information for users to decide
-        whether each result is indeed relevant or not.
+    Overall structure:
+    Our program is mainly composed of four parts: search, parsing, judgement, and query expansion.
 
-        After the judgement process is done, the program terminates if the desired relevance of the result is met or
-        there is totally no relevant result. However, when there are relevant results but the relevance requirement
-        is not met, the routine must be redone to get more relevant results. For the next routine, we pass the entire
-        judgement result including the content of search results to the query expansion module which can compute the
-        best fit words for the next round. The routine is then repeated until the relevance requirement is met.
+    main.py: The entry point of the program. At the beginning of the routine, the query term list is processed by the
+    search engine to form the request to the Bing server. In our setting, the result of the search from the Bing server
+    will contain top-10 relevant web sites and be of XML format. The XML object is then parsed to get the information
+    for users to decide whether each result is indeed relevant or not. After the judgement process is done, the program
+    terminates if the desired relevance of the result is met or there is totally no relevant result. However, when there
+    are relevant results but the relevance requirement is not met, the routine must be redone to get more relevant
+    results. For the next routine, we pass the entire judgement result including the content of search results to the
+    query expansion module which can compute the best fit words for the next round. The routine is then repeated until
+    the relevance requirement is met.
 
-    1. The program is composed of 2 parts
-    2. The query expansion algorithm is written in QueryExpansion.py
+    Computation.py: Contain some vector calculation methods that are used in the query expansion calculation
+
+    Search_engine.py: Format the query url that is used by Bing API and get the result back
+
+    Xml_parser.py: Parse the XML result returned by Bing so that we can retrieve the part of information
+    that we are interested in
+
+    QueryExpansion.py: Contain the query expansion algorithm which will be explained in detail in part(e)
+
+    Document.py: Define a class for representing each document returned by the Bing Search API
+
+
 
 
 e) Details of query modification:
+
+The query modification algorithm is composed of the following parts:
 1. remove the symbols and stop-words
         As a part of the
 
@@ -73,22 +88,34 @@ e) Details of query modification:
 f) Bing Search Account Key: 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
 
 
-g) Additional information:
+
+
+g) Results
+
+Comparison between our results and that of the reference program
+
+
+
+
+h) Additional information:
+
 1. Character encoding:
         When we construct the inverted files, one of the nasty problems we encounter is character encoding. Some results
-    in XML are returned containing unicode encoding characters and they induce some unexpected results. Since the
-    unicode characters are generally special symbols, our approach is simply replacing each of them with a whitespace.
-
-        Compared to using <string>.encode('ascii', 'ignore), this approach can help us get words correctly. In
-    encode('ascii', 'ignore'), the non-ascii characters are simple skipped, which results in that some words seperated
-    with these non-ascii symbols will become one word and this result is not we expect. In our observation, because the
+    in XML are returned containing unicode encoding characters and some non-ascii characters, which introduce some
+    unexpected results. Our approach is simply replacing each of them with a whitespace. In our observation, because the
     most information lies in alphanumeric characters which are most of the time ascii-encoded, even if we replace the
     non-ascii characters with whitespaces, the important information is still preserved.
 
+2. Order of the query terms
 
-h) Reference
+
+
+
+i) Reference
+
 [1] A Survey of Automatic Query Expansion in Information Retrieval, CLAUDIO CARPINETO and GIOVANNI ROMANO,
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.307.8469&rep=rep1&type=pdf
+
 [2] RELEVANCE FEEDBACK AND OTHER QUERY MODIFICATION TECHNIQUES, Donna Harman,
 http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap11.htm
 
