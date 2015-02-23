@@ -39,3 +39,7 @@ f) Bing Search Account Key:
 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
 
 g) Additional information:
+    1. Character encoding:
+        When we construct the inverted files, one of the nasty problems we encounter is character encoding. Some results in XML are returned containing unicode encoding characters and they induce some unexpected results. Since the unicode characters are generally special symbols, our approach is simply replacing each of them with a whitespace.
+
+        Compared to using <string>.encode('ascii', 'ignore), this approach can help us get words correctly. In encode('ascii', 'ignore'), the non-ascii characters are simple skipped, which results in that some words seperated with these non-ascii symbols will become one word and this result is not we expect. In our observation, because the most information lies in alphanumeric characters which are most of the time ascii-encoded, even if we replace the non-ascii characters with whitespaces, the important information is still preserved.
