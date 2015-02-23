@@ -107,7 +107,17 @@ h) Additional information:
     non-ascii characters with whitespaces, the important information is still preserved.
 
 2. Order of the query terms
+        In our implementation, we do not focus on phrases but only treat words as terms. One of the reasons is that to
+    distinguish phrases from words, we need statically sustainable data to support the decisions during processing.
+    However, the information in the titles, the urls, and the descriptions are far from enough to establish the reliable
+    assistance to the computation.
 
+        What we guaranteed in our method is that the order of augmented terms follows the scores computed with Rocchio's
+    algorithm. Sometimes it could be non-optimum. For example, after searching with 'Big Apple' and judge for New York,
+    the added query terms could be "Big Apple york new". Granted, the result would be the best with "Big Apple new york",
+    but when the general algorithm is applied with such statically deficient data, the result could sometimes be worse.
+    Rather than occasionally diverging from the desired direction, we decide to use the guaranteed method to augment the
+    query.
 
 
 
@@ -118,4 +128,3 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.307.8469&rep=rep1&type=
 
 [2] RELEVANCE FEEDBACK AND OTHER QUERY MODIFICATION TECHNIQUES, Donna Harman,
 http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap11.htm
-
