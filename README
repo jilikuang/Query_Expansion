@@ -5,13 +5,20 @@ a) Group members:
     Jie-Gang Kuang (jk3735)
 
 b) Files:
+    /--+--Computation.py
+       +--Document.py
+       +--main.py
+       +--QueryExpansion.py
+       +--README
+       +--Search_engine.py
+       +--stopwords.txt
+       +--Xml_parser.py
 
 c) How to run:
     python main.py <bing account key> <precision> <query>
 
     where:
-        * bing account key: optional Bing Account Key
-                            (can be omitted to use the default one)
+        * bing account key: the Bing Account Key used for searching
         * precision: a real number between 0 and 1
         * query: a list of words in single quotes
 
@@ -20,11 +27,10 @@ d) Internal design:
     2. The query expansion algorithm is written in QueryExpansion.py
 
 e) Details of query modification:
-1. We use Roccio algorithm
+1. We use Rocchio algorithm
 2. calculate the term frequency for each document
 3. Divided by the length of the document
 4. tf-idf
-
 
 f) Bing Search Account Key:
 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
