@@ -64,7 +64,7 @@ e) Details of query modification:
 
 The query modification algorithm is composed of the following parts:
 1. remove the symbols and stop-words
-         In most cases, stop words add little semantic value to a sentence. They are filler words that help sentences
+        In most cases, stop words add little semantic value to a sentence. They are filler words that help sentences
     flow better, but provide very little context on their own. And we have found a list of common English stop words
     from Wikipedia.
 
@@ -93,15 +93,7 @@ f) Bing Search Account Key: 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
 
 
 
-
-g) Results
-
-Comparison between our results and that of the reference program
-
-
-
-
-h) Additional information:
+g) Additional information:
 
 1. Character encoding:
         When we construct the inverted files, one of the nasty problems we encounter is character encoding. Some results
@@ -110,22 +102,33 @@ h) Additional information:
     most information lies in alphanumeric characters which are most of the time ascii-encoded, even if we replace the
     non-ascii characters with whitespaces, the important information is still preserved.
 
-2. Order of the query terms
+2. Phrases and order of the query terms:
         In our implementation, we do not focus on phrases but only treat words as terms. One of the reasons is that to
-    distinguish phrases from words, we need statically sustainable data to support the decisions during processing.
+    distinguish phrases from words, we need statistically sustainable data to support the decisions during processing.
     However, the information in the titles, the urls, and the descriptions are far from enough to establish the reliable
     assistance to the computation.
 
         What we guaranteed in our method is that the order of augmented terms follows the scores computed with Rocchio's
     algorithm. Sometimes it could be non-optimum. For example, after searching with 'Big Apple' and judge for New York,
     the added query terms could be "Big Apple york new". Granted, the result would be the best with "Big Apple new york",
-    but when the general algorithm is applied with such statically deficient data, the result could sometimes be worse.
+    but when the general algorithm is applied with such statistically deficient data, the result could sometimes be worse.
     Rather than occasionally diverging from the desired direction, we decide to use the guaranteed method to augment the
     query.
 
+3. Result evaluation:
+        In addition to the relevance judgement, we also check the augmented query terms computed with our method.
+    Unfortunately, because the amount of data is rather small, we cannot evaluate the quality statistically. However,
+    we compare our augmented terms with the result of the reference program, we are able to claim that our method is at
+    least parallel to the reference program. For example, with the query, 'Big Apple', both programs could augment the
+    query with 'city york'.
+
+        In order to improve on the performance, the first thing we can do should be rearranging word
+    order as mentioned above. Nevertheless, arbitrarily changing the order based on statistically unreliable data could
+    produce different results. Therefore we stay with the solution before we can come up with a better way in the future.
 
 
-i) Reference
+
+h) Reference
 
 [1] A Survey of Automatic Query Expansion in Information Retrieval, CLAUDIO CARPINETO and GIOVANNI ROMANO,
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.307.8469&rep=rep1&type=pdf
