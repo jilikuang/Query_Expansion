@@ -31,7 +31,8 @@ class QueryExpansion:
             S.append(s.lower())
         return S
 
-    # construct words group
+    # construct words group and calculate the idf for each term. The words are from the titles, urls and descriptions.
+    # And we iterate each document and calculate the idf.
     def construct_words_vector(self, documents):
         self.word_collection = list(self.query)
         for term in self.query:
@@ -56,7 +57,7 @@ class QueryExpansion:
         for key in self.idf:
             self.idf[key] = math.log(num/self.idf[key],2)
 
-    # split the words in the document
+    # split the words in the document by the symbols
     @staticmethod
     def get_split_words(string):
         stripped = ""
@@ -74,7 +75,7 @@ class QueryExpansion:
             temp = temp.replace(symbol, " ")
         return temp.split(" ")
 
-    # compute the vector for a single document
+    # compute the space vector for a single document. And we use tf-idf to represent the weight
     def compute_vector(self, doc):
         words = {}
         doc_string = [doc.description, doc.url, doc.title]
@@ -109,7 +110,7 @@ class QueryExpansion:
             else:
                 self.query_vector.append(0)
 
-    # compute current query vector
+    # compute current query vector using the Rocchio algorithm
     def compute_query_vector(self, documents):
         self.construct_words_vector(documents)
         self.initialize_query_vector()
@@ -132,7 +133,8 @@ class QueryExpansion:
         self.query_vector = Computation.Computation.sum(self.query_vector, vector_R)
         self.query_vector = Computation.Computation.dif(self.query_vector, vector_NR)
 
-    # compute new query terms
+    # compute new query terms by sorting the terms by weight and adding the two terms with the highest weight to the
+    # old query
     def compute_new_term(self, documents):
         self.compute_query_vector(documents)
         word_set = {}
@@ -141,8 +143,6 @@ class QueryExpansion:
         sorted_set = sorted(word_set, key=word_set.get, reverse=True)
         new_term = []
         i = 0
-        # print word_set
-        # print sorted_set
         while len(new_term) < 2 and i < len(sorted_set):
             word = sorted_set[i]
             i += 1
