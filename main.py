@@ -80,7 +80,7 @@ def main(argv):
             print '['
             print ' URL: ' + url
             print ' Title: ' + title
-            print ' Summary: ' + desc
+            print ' Summary: ' + desc.encode('ascii', 'ignore')
             print ']'
             relevance = True
             judge = raw_input('Relevant (Y/N)? ')
