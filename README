@@ -70,20 +70,20 @@ The query modification algorithm is composed of the following parts:
 
 2. Give different weights to title and description
         Based on our survey of the research papers, we find that we need to assign different weights to the terms in
-    different part. For example, if a term is in the title, we should assign more weight to it. Therefore, after numbers
-    of experiments, we have chosen to assign 1.2 to the terms in the title while 1 to the others.
+    different part. For example, if a term is in the title, we should assign more weight to it. Therefore, after
+    numbers of experiments, we have chosen to assign 1.2 to the terms in the title while 1 to the others.
 
 3. calculate the normalized term frequency for each document
-        We take the normalized term frequency instead of the original term frequency. This is calculated by dividing the
-    original term frequency by the length of the document.
+        We take the normalized term frequency instead of the original term frequency. This is calculated by dividing
+    the original term frequency by the length of the document.
 
 4. Compute tf-idf
         In our algorithm, tf is the normalized term frequency in the document and idf(t) = log N/M(t), where M is the
     number of documents that contain term t. And then we compute tfidf = tf * idf.
 
 5. Rocchio algorithm
-        The key part of our query modification algorithm is Rocchio algorithm, which is also the most popular algorithm
-    in query expansion. The new vector is calculated by:
+        The key part of our query modification algorithm is Rocchio algorithm, which is also the most popular
+    algorithm in query expansion. The new vector is calculated by:
                         Q1 = a*Q0 + b*sum(R/n1) - c*sum(NR/n2)
     We have chosen a=1, b=0.75, c=0.15 based on the survey.
 
@@ -116,15 +116,18 @@ g) Additional information:
     query.
 
 3. Result evaluation:
+        We ran our program the with the three examples "musk", "gates" and "columbia", the program can achieve a
+    precision of 0.9 after 1, 1 and 2 iterations respectively, which is better than the reference program.
+
         In addition to the relevance judgement, we also check the augmented query terms computed with our method.
     Unfortunately, because the amount of data is rather small, we cannot evaluate the quality statistically. However,
     we compare our augmented terms with the result of the reference program, we are able to claim that our method is at
     least parallel to the reference program. For example, with the query, 'Big Apple', both programs could augment the
     query with 'city york'.
 
-        In order to improve on the performance, the first thing we can do should be rearranging word
-    order as mentioned above. Nevertheless, arbitrarily changing the order based on statistically unreliable data could
-    produce different results. Therefore we stay with the solution before we can come up with a better way in the future.
+        In order to improve on the performance, the first thing we can do should be rearranging word order as mentioned
+    above. Nevertheless, arbitrarily changing the order based on statistically unreliable data could produce different
+    results. Therefore we stay with the solution before we can come up with a better way in the future.
 
 
 

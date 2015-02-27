@@ -169,5 +169,4 @@ Feedback Summary
 Query gates bill iii
 Precision 0.9
 Desired precision reached, done
-jk3735@bern:~/ADB/project1$ 
 

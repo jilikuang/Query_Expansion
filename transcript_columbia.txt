@@ -255,5 +255,4 @@ Feedback Summary
 Query columbia college new university york
 Precision 1.0
 Desired precision reached, done
-jk3735@bern:~/ADB/project1$ 
 
