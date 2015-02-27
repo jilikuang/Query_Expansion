@@ -1,0 +1,173 @@
+jk3735@bern:~/ADB/project1$ python main.py 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk 0.9 musk 
+Parameters:
+Client key = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query      = musk
+Precision  = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27musk%27&$top=10&$format=Atom
+Total no of results: 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://en.wikipedia.org/wiki/Musk
+ Title: Musk - Wikipedia, the free encyclopedia
+ Summary: Musk is a class of aromatic substances commonly used as base notes in perfumery. They include glandular secretions from animals such as the musk deer, numerous plants ...
+]
+Relevant (Y/N)? n
+Result 2
+[
+ URL: http://en.wikipedia.org/wiki/Elon_Musk
+ Title: Elon Musk - Wikipedia, the free encyclopedia
+ Summary: Elon Reeve Musk (born June 28, 1971) is a South Africa-born, Canadian-American entrepreneur, engineer, inventor and investor. He is the CEO and CTO of ...
+]
+Relevant (Y/N)? y
+Result 3
+[
+ URL: http://dictionary.reference.com/browse/musk
+ Title: Musk | Define Musk at Dictionary.com
+ Summary: The freezer case was full of curious meats: a snowy hunk of a fin whale's throat, a slab of musk ox. The resulting molecule is similar in shape and smell to the musk ...
+]
+Relevant (Y/N)? n
+Result 4
+[
+ URL: http://www.merriam-webster.com/dictionary/musk
+ Title: Musk - Definition and More from the Free Merriam-Webster ...
+ Summary: Full Definition of MUSK 1 a : a substance with a penetrating persistent odor obtained from a sac beneath the abdominal skin of the male musk deer and used as a ...
+]
+Relevant (Y/N)? n
+Result 5
+[
+ URL: http://www.fragrantica.com/notes/Musk-4.html
+ Title: Musk perfume ingredient, Musk fragrance and essential oils ...
+ Summary: Musk is a whole class of fragrant substances used as base notes in perfumery. This wonderful animalistic note creates a groundwork on which the rest of the aromatic ...
+]
+Relevant (Y/N)? n
+Result 6
+[
+ URL: http://www.ebay.com/sch/i.html?_nkw=musk+oil
+ Title: musk oil | eBay
+ Summary: Find great deals on eBay for musk oil coty wild musk oil. Shop with confidence.
+]
+Relevant (Y/N)? n
+Result 7
+[
+ URL: http://www.thefreedictionary.com/musk
+ Title: musk - definition of musk by The Free Dictionary
+ Summary: musk (msk) n. 1. a. A greasy secretion with a powerful odor, produced in a glandular sac in the abdomen of a male musk deer and used in traditional medicines and ...
+]
+Relevant (Y/N)? n
+Result 8
+[
+ URL: http://www.amazon.com/s?ie=UTF8&page=1&rh=n%3A3760911%2Ck%3Aperfume%20musk
+ Title: Amazon.com: perfume musk: Beauty
+ Summary: ASDM Beverly Hills Egyptian Musk, A Rich, Egyptian Musk With Precious Wood Blends and Floral Top Note., 0.5 Ounce. $25.00 $24.95 ;
+]
+Relevant (Y/N)? n
+Result 9
+[
+ URL: http://www.cooperlabs.com/Musk/
+ Title: The Original Musk Oil - 1-800-645-5048 - Cooperlabs Skin ...
+ Summary: The Original Musk Oil. Its ability to excite has been spoken of for centuries. You may not even be aware of its fragrance, but your own body chemistry is releasing ...
+]
+Relevant (Y/N)? n
+Result 10
+[
+ URL: http://www.genecards.org/cgi-bin/carddisp.pl?gene=MUSK
+ Title: MUSK Gene - GeneCards | MUSK Protein | MUSK Antibody
+ Summary: Complete information for MUSK gene (protein-coding), muscle, skeletal, receptor tyrosine kinase, including: function, proteins, disorders, pathways, orthologs, and ...
+]
+Relevant (Y/N)? n
+1.0 10
+======================
+Feedback Summary
+Query musk
+Precision 0.1
+Still below the desired precision of 0.9
+Indexing results ....
+Augmenting by elon born
+Parameters:
+Client key = 6SBqV1l4XaDnfx+w4rPVqyEgtNJqvUJu50wXdg5njhk
+Query      = musk elon born
+Precision  = 0.9
+URL: https://api.datamarket.azure.com/Bing/Search/Web?Query=%27musk%20elon%20born%27&$top=10&$format=Atom
+Total no of results: 10
+Bing Search Results:
+======================
+Result 1
+[
+ URL: http://en.wikipedia.org/wiki/Elon_Musk
+ Title: Elon Musk - Wikipedia, the free encyclopedia
+ Summary: Elon Reeve Musk (born June 28, 1971) is a South Africa-born, Canadian-American entrepreneur, engineer, inventor and investor. He is the CEO and CTO of ...
+]
+Relevant (Y/N)? y
+Result 2
+[
+ URL: http://www.biography.com/people/elon-musk-20837159#!
+ Title: Elon Musk - Biography - Inventor, Engineer, Explorer ...
+ Summary: Elon Musk started co-founded PayPal and Tesla Motors, and created the space corporation SpaceX, which is credited for sending the first commercial space flight to the ...
+]
+Relevant (Y/N)? y
+Result 3
+[
+ URL: http://www.britannica.com/EBchecked/topic/1676437/Elon-Musk
+ Title: Elon Musk | biography - American entrepreneur ...
+ Summary: Elon Musk, (born June 28, 1971, Pretoria, South Africa), South African-born American entrepreneur who cofounded the electronic-payment firm PayPal and the maker of ...
+]
+Relevant (Y/N)? y
+Result 4
+[
+ URL: http://www.notablebiographies.com/news/Li-Ou/Musk-Elon.html
+ Title: Elon Musk Biography - life, parents, name, story, history ...
+ Summary: Elon Musk was a multi-millionaire by the time he reached the age of thirty-one thanks to his creation of the company that became PayPal, the popular money ...
+]
+Relevant (Y/N)? y
+Result 5
+[
+ URL: http://simple.wikipedia.org/wiki/Elon_Musk
+ Title: Elon Musk - Simple English Wikipedia, the free encyclopedia
+ Summary: Elon R. Musk (born June 28, 1971) is an South African-born Canadian-American investor and inventor. Musk is the current CEO & Chief Product Architect of Tesla Motors ...
+]
+Relevant (Y/N)? y
+Result 6
+[
+ URL: http://www.nndb.com/people/021/000245283/
+ Title: Elon Musk - NNDB: Tracking the entire world
+ Summary: Elon Musk. Born: 28-Jun-1971 Birthplace: Pretoria, South Africa. Gender: Male Race or Ethnicity: White Sexual orientation: Straight Occupation: Business, Engineer ...
+]
+Relevant (Y/N)? y
+Result 7
+[
+ URL: http://techcrunch.com/topic/person/elon-musk/
+ Title: Elon Musk | TechCrunch
+ Summary: Elon Musk is a South African-born, Canadian-American businessman, inventor and investor. He founded Zip2, a web software company, with his brother, Kimbal, and sold ...
+]
+Relevant (Y/N)? y
+Result 8
+[
+ URL: http://inventors.about.com/od/mstartinventions/p/Elon-Musk.htm
+ Title: Elon Musk - Biography of Elon Musk - About.com Money
+ Summary: Elon Musk was born in South Africa, in 1971. His father was an engineer and his mother a nutritionist. An avid fan of computers, by the age of twelve Musk had written ...
+]
+Relevant (Y/N)? y
+Result 9
+[
+ URL: https://www.crunchbase.com/person/elon-musk
+ Title: Elon Musk - Chairman, CEO and Product Architect @ Tesla ...
+ Summary: Elon Musk (born June 28,1971) is an entrepreneur and a co-founder of PayPal, Tesla Motors and Space Exploration Technologies. He is chairman/CEO of Tesla Motors and ...
+]
+Relevant (Y/N)? y
+Result 10
+[
+ URL: http://www.bornrich.com/elon-musk.html
+ Title: Elon Musk - biography, net worth, quotes, wiki, assets ...
+ Summary: Born as Elon Musk has an estimated net worth of $ 12 billion. He is an entrepreneur and engineer who started computer programming when he was just ten years old.
+]
+Relevant (Y/N)? y
+10.0 10
+======================
+Feedback Summary
+Query musk elon born
+Precision 1.0
+Desired precision reached, done
+jk3735@bern:~/ADB/project1$ 
+
