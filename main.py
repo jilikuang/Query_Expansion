@@ -79,7 +79,7 @@ def main(argv):
             print 'Result ' + str(i+1)
             print '['
             print ' URL: ' + url
-            print ' Title: ' + title
+            print ' Title: ' + title.encode('ascii', 'ignore')
             print ' Summary: ' + desc.encode('ascii', 'ignore')
             print ']'
             relevance = True
